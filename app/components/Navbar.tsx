@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Navbar() {
   return (
-    <div className="bg-primary p-6 flex items-center justify-between mb-14">
+    <div className="bg-primary p-6 flex items-center justify-between">
       <Link href={'/'} passHref>
         <h1 className='text-2xl text-base-100 font-semibold'>Ebenezer Zergabachew</h1>
       </Link>

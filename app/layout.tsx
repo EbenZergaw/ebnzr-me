@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 import './globals.css'
 
 
@@ -17,9 +18,14 @@ export default function RootLayout({
     <html lang="en" data-theme="mytheme">
       <body>
         <Navbar></Navbar>
-        <main className='w-11/12 mx-auto'>
-          {children}
-        </main>
+        <section className='lg:grid lg:grid-cols-6'>
+          <div className="lg:c">
+            <Sidebar></Sidebar>
+          </div>
+          <main className='lg:col-span-5 mt-14 ml-10'>
+            {children}
+          </main>
+        </section>
       </body>
     </html>
   )
