@@ -22,7 +22,7 @@ const config: Config = {
   daisyui: {
     themes: [
       {
-        mytheme: {
+        dark: {
           "primary": "#f97316",
                   
           "secondary": "#3b82f6",

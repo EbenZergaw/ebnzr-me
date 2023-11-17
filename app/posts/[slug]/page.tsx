@@ -1,4 +1,5 @@
-import React from 'react'
+
+import type { Metadata } from 'next'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -16,7 +17,7 @@ export async function generateStaticParams(){
 
 function getPost({slug}: {slug: string}){
     const markdownFile = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8')
-
+    
     const {data: frontmatter, content} = matter(markdownFile)
     return{
         frontmatter,
@@ -24,6 +25,15 @@ function getPost({slug}: {slug: string}){
         content
     }
 }
+
+export async function generateMetadata({ params }) {
+    const props = getPost(params)
+    return {
+      title: props.frontmatter.title,
+      description: props.frontmatter.description
+    }
+  }
+
 
 function PostPage({params} : any) {
     const props = getPost(params)

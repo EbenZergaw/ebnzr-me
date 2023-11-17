@@ -3,6 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import { ImGithub, ImLinkedin } from "react-icons/im";
+import { GoPersonFill } from "react-icons/go";
+import { PiChatCircleFill } from "react-icons/pi";
 
 function Sidebar() {
     const files = fs.readdirSync(path.join("posts"))
@@ -43,28 +46,52 @@ function Sidebar() {
     });
 
     return (
-        <div className=''>
-            <Link className='text-secondary font-bold text-2xl my-4 mx-2 p-4 hover:text-primary' href='/'>About</Link>
-            <br />
-            <Link className='text-secondary font-bold text-2xl my-4 mx-2 p-4 hover:text-primary' href='/'>github</Link>
-            <br />
-            <Link className='text-secondary font-bold text-2xl my-4 mx-2 p-4 hover:text-primary' href='/'>About</Link>
-            {sortedPosts.map((post) => (
-                <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
-                    <div className='hover:border border-secondary rounded-lg my-4 mx-2 p-4'>
-                        <h3 className="text-lg font-bold text-primary">
-                            {post.meta.title}
-                        </h3>
-                        <span className="text-secondary">{post.meta.date}</span>
-                        <div>
-                            {post.meta.tags.map((tag: string) => (
-                                <p className='badge badge-accent mr-2' key={tag}>{tag}</p>
-                            ))}
-                        </div>
-                    </div>
+        <div className='mt-14 ml-4'>
+
+            <div className="hidden lg:block">
+                <Link className='transition-all text-secondary font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
+                    <GoPersonFill className='inline text-3xl'/>
+                    <span className='ml-4'>About</span>
                 </Link>
-            ))}
-        </div>
+                <br />
+                <Link className='transition-all text-secondary font-bold text-xl my-2 inline-block hover:text-primary' 
+                    href='https://github.com/EbenZergaw'
+                    target='_blank'>
+                    <ImGithub className='inline text-3xl'/>
+                    <span className='ml-4'>Github</span>
+                </Link>
+                <br />
+                <Link className='transition-all text-secondary font-bold text-xl my-2 inline-block hover:text-primary' 
+                    href='https://www.linkedin.com/in/ebenezer-zergabachew/' 
+                    target='_blank'>
+                    <ImLinkedin className='inline text-3xl'/>
+                    <span className='ml-4'>LinkedIn</span>
+                </Link>
+                <br />
+                <Link className='transition-all text-secondary font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
+                    <PiChatCircleFill className='inline text-3xl'/>
+                    <span className='ml-4'>Contact</span>
+                </Link>
+                <br />
+
+                <div className="text-xl font-semibold text-secondary mt-10">Posts</div>
+                {sortedPosts.map((post) => (
+                    <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
+                        <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4'>
+                            <h3 className="text-lg font-bold text-primary">
+                                {post.meta.title}
+                            </h3>
+                            <span className="text-secondary">{post.meta.date}</span>
+                            <div>
+                                {post.meta.tags.map((tag: string) => (
+                                    <p className='badge badge-accent mr-2' key={tag}>{tag}</p>
+                                ))}
+                            </div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        </div>     
     )
 }
 
