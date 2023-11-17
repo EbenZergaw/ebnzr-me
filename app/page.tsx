@@ -21,17 +21,23 @@ export default function Home() {
   })
 
   return (
-    <main className="flex flex-col">
+    <main className="mx-auto">
 
-      <h1 className="text-3xl font-bold">
-        Ebenezers Site
-      </h1>
+      <div>
 
-      <section className="py-10">
-        <h2 className="text-2xl font-bold">
-          latest posts
-        </h2>
-      </section>
+        <h1 className="text-xl font-bold text-ac">
+          Hello I'm <div className="text-3xl text-primary">Ebenezer Zergabachew</div>
+        </h1>
+
+        <section className="mt-10">
+
+        <p>I'm a student at Virginia Tech</p>
+        <br />
+        <p>I like startups, technology, and martial arts</p>
+          
+        </section>
+
+      </div>
 
       
     </main>

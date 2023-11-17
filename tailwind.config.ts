@@ -29,7 +29,7 @@ const config: Config = {
                   
           "accent": "#6d28d9",
                   
-          "neutral": "#4b5563",
+          "neutral": "#2C3849",
                   
           "base-100": "#1f2937",
                   

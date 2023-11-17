@@ -38,8 +38,8 @@ export async function generateMetadata({ params }) {
 function PostPage({params} : any) {
     const props = getPost(params)
   return (
-    <article className='prose lg:prose-xl'>
-        <h1>{props.frontmatter.title}</h1>
+    <article className='prose lg:prose-xl mx-auto'>
+        <h1 className='text-primary'>{props.frontmatter.title}</h1>
 
         <MDXRemote source={props.content}></MDXRemote>
     </article>
