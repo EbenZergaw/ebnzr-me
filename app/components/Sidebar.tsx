@@ -74,7 +74,7 @@ function Sidebar() {
                 </Link>
                 <br />
 
-                <div className="text-xl font-semibold text-secondary mt-10">Posts</div>
+                <div className="text-xl font-semibold text-primary mt-10">Posts</div>
                 {sortedPosts.map((post) => (
                     <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
                         <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4'>
