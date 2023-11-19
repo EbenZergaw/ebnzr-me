@@ -44,7 +44,7 @@ function page() {
     <div>
         <h1 className="text-3xl text-primary">Posts</h1>
         
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
             {sortedPosts.map((post) => (
                 <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
                     <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4'>

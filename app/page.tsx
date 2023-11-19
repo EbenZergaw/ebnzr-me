@@ -4,6 +4,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import portrait from '../public/images/me.png'
+import code from '../public/images/code.svg'
 
 export default function Home() {
 
@@ -38,12 +39,13 @@ export default function Home() {
             {/* <p className='text-xl'>I write about:</p> */}
           </div>
 
-          <Image className='lg:w-3/4' src={portrait} alt='Ebenezer Zergabachew'></Image>
+          <Image className='lg:w-3/4 ' src={portrait} alt='Ebenezer Zergabachew'></Image>
           
         </section>
-{/* 
+
         <section className="mt-24">
-          <h2 className='text-3xl text-primary'>coding</h2>
+          <h2 className='text-3xl text-primary'>I write about product development</h2>
+          <Image className='lg:w-1/2 mt-10' src={code} alt='Code'></Image>
         </section>
 
 
@@ -55,7 +57,7 @@ export default function Home() {
 
         <section className="mt-24">
           <h2 className='text-3xl text-primary'>...Christianity</h2>
-        </section> */}
+        </section>
 
 
 
