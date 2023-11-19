@@ -9,7 +9,7 @@ import { IoIosDocument } from "react-icons/io"
 function Navbar() {
 
   return (
-    <div className="bg-primary p-6 flex items-center justify-between">
+    <nav className="bg-primary p-6 flex items-center justify-between">
       <Link href={'/'} passHref>
         <span className='lg:text-2xl text-base-100 font-semibold'>ebnzr.me</span>
       </Link>
@@ -55,7 +55,7 @@ function Navbar() {
                 </ul>
             </div>
         </span>
-    </div>
+    </nav>
   )
 }
 

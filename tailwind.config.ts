@@ -23,11 +23,11 @@ const config: Config = {
     themes: [
       {
         dark: {
-          "primary": "#f97316",
+          "primary": "#ff5a21",
                   
-          "secondary": "#4FABFF",
+          "secondary": "#9554FF",
                   
-          "accent": "#6d28d9",
+          "accent": "#5E9EFF",
                   
           "neutral": "#2C3849",
                   

@@ -5,6 +5,7 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import portrait from '../public/images/me.png'
 import code from '../public/images/code.svg'
+import roundhouse from '../public/images/roundhouse.png'
 
 export default function Home() {
 
@@ -29,9 +30,11 @@ export default function Home() {
 
 
         <section className="lg:grid lg:grid-cols-2">
-          <div>
-            <h1 className="text-xl font-bold">
-              Hello I'm <div className="text-3xl text-primary">Ebenezer Zergabachew</div>
+          <div className="text-xl font-semibold">
+            <h1>
+              Hello I'm <div className="text-3xl text-primary">
+                <br />
+                Ebenezer Zergabachew</div>
             </h1>
             <br />
             <p className='text-xl'>I'm a student at Virginia Tech with an interest in business and technology.</p>
@@ -51,12 +54,13 @@ export default function Home() {
 
         <section className="mt-24">
           <h2 className='text-3xl text-primary float-right'>...martial arts</h2>
+          <Image className='lg:w-1/2 mt-10 float-right' src={roundhouse} alt='Roundhouse Kick'></Image>
           <div className="clear-right"></div>
         </section>
 
 
         <section className="mt-24">
-          <h2 className='text-3xl text-primary'>...Christianity</h2>
+          <h2 className='text-3xl text-primary'>...and Christianity</h2>
         </section>
 
 
