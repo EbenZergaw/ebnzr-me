@@ -16,14 +16,26 @@ h1, h2, h3{
     font-family: 'Chakra Petch', sans-serif;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #9554FF;        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: #ff5a21;    /* color of the scroll thumb */
-  }
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #9554FF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #ff5a21 ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #00a6e2;
+}
+
+code{
+color: #ff5a21 !important;
+}
