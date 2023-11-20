@@ -1,3 +1,4 @@
+'use server'
 import React from 'react'
 import fs from 'fs'
 import path from 'path'
@@ -49,26 +50,26 @@ function Sidebar() {
         <div className='mt-14 ml-4'>
 
             <div className="hidden lg:block">
-                <Link className='transition-all text-gray-600 font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
+                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
                     <GoPersonFill className='inline text-3xl'/>
                     <span className='ml-4'>About</span>
                 </Link>
                 <br />
-                <Link className='transition-all text-gray-600 font-bold text-xl my-2 inline-block hover:text-primary' 
+                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' 
                     href='https://github.com/EbenZergaw'
                     target='_blank'>
                     <ImGithub className='inline text-3xl'/>
                     <span className='ml-4'>Github</span>
                 </Link>
                 <br />
-                <Link className='transition-all text-gray-600 font-bold text-xl my-2 inline-block hover:text-primary' 
+                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' 
                     href='https://www.linkedin.com/in/ebenezer-zergabachew/' 
                     target='_blank'>
                     <ImLinkedin className='inline text-3xl'/>
                     <span className='ml-4'>LinkedIn</span>
                 </Link>
                 <br />
-                <Link className='transition-all text-gray-600 font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
+                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
                     <PiChatCircleFill className='inline text-3xl'/>
                     <span className='ml-4'>Contact</span>
                 </Link>

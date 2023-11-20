@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import { FaBars } from "react-icons/fa"
@@ -5,17 +6,22 @@ import { ImGithub, ImLinkedin } from "react-icons/im";
 import { GoPersonFill } from "react-icons/go";
 import { PiChatCircleFill } from "react-icons/pi";
 import { IoIosDocument } from "react-icons/io"
+import { useTheme } from './ThemeContext';
+import { BsMoonStarsFill } from "react-icons/bs";
+import { RiSunFill } from "react-icons/ri";
 
-function Navbar() {
+function Navbar({}) {
+  const { toggleTheme, theme } = useTheme();
 
   return (
     <nav className="bg-primary p-6 flex items-center justify-between">
       <Link href={'/'} passHref>
         <span className='lg:text-2xl text-base-100 font-semibold'>ebnzr.me</span>
       </Link>
-      <div className="hidden lg:w-1/4 lg:float-right lg:block">
-        
-      </div>
+      
+     <div className='text-base-100 text-4xl' onClick={toggleTheme}>
+      {theme == 'light' ? <BsMoonStarsFill /> : <RiSunFill />}
+     </div>
 
         <span className="block lg:hidden">
             <div className="dropdown dropdown-end">

@@ -2,6 +2,8 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import './globals.css'
+import ThemeProvider, {useTheme} from './components/ThemeContext'
+
 
 export default function RootLayout({
   children,
@@ -9,10 +11,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
+  // const { theme } = useTheme();
 
   return (
-    <>
-      <html className='w-full' lang="en" data-theme={'dark'}>
+    <ThemeProvider>
+      {/* <html className='w-full' lang="en" data-theme={theme}> */}
         <body>
           <Navbar></Navbar>
           <section className='lg:grid lg:grid-cols-6'>
@@ -24,7 +27,7 @@ export default function RootLayout({
             </main>
           </section>
         </body>
-      </html>
-    </>
+      {/* </html> */}
+    </ThemeProvider>
   )
 }

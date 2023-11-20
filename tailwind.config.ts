@@ -29,7 +29,7 @@ const config: Config = {
                   
           "accent": "#5E9EFF",
                   
-          "neutral": "#2C3849",
+          "neutral": "#6C83A2",
                   
           "base-100": "#1f2937",
                   
@@ -41,6 +41,17 @@ const config: Config = {
                   
           "error": "#dc2626",
         },
+        light: {
+          "primary": "#ff5a21", // Peach
+          "secondary": "#003459", // Periwinkle
+          "accent": "#9554FF", // Bright light blue
+          "neutral": "#2C3849", // Off-white
+          "base-100": "#FBECD7", // Pure white
+          "info": "#7DD3FC", // Pale cyan
+          "success": "#68D391", // Soft emerald
+          "warning": "#F6E05E", // Soft yellow
+          "error": "#FEB2B2", // Blush pink
+        }
       },
     ],
   },

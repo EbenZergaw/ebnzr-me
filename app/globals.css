@@ -4,10 +4,30 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
 
-html{
+.dark{
     background-image: url('../public/images/pattern.png');
     background-size: 10%;
+    transition: 0.8s;
 }
+
+.light{
+    background-image: url('../public/images/light-pattern.png');
+    background-size: 10%;
+    transition: 0.8s;
+}
+@media only screen and (max-width: 768px) {
+    .dark{
+        background-image: url('../public/images/pattern.png');
+        background-size: 40%;
+        transition: 0.8s;
+    }
+    .light{
+        background-image: url('../public/images/light-pattern.png');
+        background-size: 40%;
+        transition: 0.8s;
+    }
+}
+
 svg{
     vertical-align: bottom !important;
 }
@@ -34,8 +54,4 @@ background: #ff5a21 ;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background: #00a6e2;
-}
-
-code{
-color: #ff5a21 !important;
 }
