@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import './globals.css'
 import ThemeProvider, {useTheme} from './components/ThemeContext'
+import Footer from './components/Footer'
 
 
 export default function RootLayout({
@@ -15,7 +16,6 @@ export default function RootLayout({
 
   return (
     <ThemeProvider>
-      {/* <html className='w-full' lang="en" data-theme={theme}> */}
         <body>
           <Navbar></Navbar>
           <section className='lg:grid lg:grid-cols-6'>
@@ -26,8 +26,8 @@ export default function RootLayout({
               {children}
             </main>
           </section>
+        <Footer></Footer>
         </body>
-      {/* </html> */}
     </ThemeProvider>
   )
 }

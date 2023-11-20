@@ -15,6 +15,8 @@
     background-size: 10%;
     transition: 0.8s;
 }
+
+
 @media only screen and (max-width: 768px) {
     .dark{
         background-image: url('../public/images/pattern.png');
@@ -43,7 +45,7 @@ h1, h2, h3{
 
 /* Track */
 ::-webkit-scrollbar-track {
-background: #9554FF;
+/* background: #9554FF; */
 }
 
 /* Handle */
@@ -51,7 +53,11 @@ background: #9554FF;
 background: #ff5a21 ;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-background: #00a6e2;
+footer{
+    position: fixed;
+    bottom: 0px;
+}
+
+body{
+    padding-bottom: 100px;
 }
