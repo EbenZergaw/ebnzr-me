@@ -31,8 +31,9 @@ export default function Home() {
 
         <section className="lg:grid lg:grid-cols-2">
           <div className="text-xl font-semibold">
+          Hello I'm 
             <h1>
-              Hello I'm <div className="text-3xl text-primary">
+              <div className="text-3xl text-primary">
                 <br />
                 Ebenezer Zergabachew</div>
             </h1>

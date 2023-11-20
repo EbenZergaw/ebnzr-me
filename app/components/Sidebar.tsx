@@ -49,7 +49,7 @@ function Sidebar() {
     return (
         <div className='mt-14 ml-4'>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block header-font">
                 <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
                     <GoPersonFill className='inline text-3xl'/>
                     <span className='ml-4'>About</span>
@@ -75,7 +75,7 @@ function Sidebar() {
                 </Link>
                 <br />
 
-                <div className="text-xl font-semibold text-primary mt-10">Posts</div>
+                <h2 className="text-xl font-bold text-primary mt-10">Posts</h2>
                 {sortedPosts.map((post) => (
                     <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
                         <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4'>

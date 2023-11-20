@@ -34,8 +34,12 @@ svg{
     vertical-align: bottom !important;
 }
 
-h1, h2, h3{
+h1, h2, h3, .header-font{
     font-family: 'Chakra Petch', sans-serif;
+}
+
+h1, h2, h3{
+    color: #ff5a21 !important;
 }
 
 /* width */
