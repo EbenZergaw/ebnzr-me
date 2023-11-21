@@ -78,7 +78,7 @@ function Sidebar() {
                 <h2 className="text-xl font-bold text-primary mt-10">Posts</h2>
                 {sortedPosts.map((post) => (
                     <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
-                        <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4'>
+                        <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4 w-11/12'>
                             <h3 className="text-lg font-bold text-primary">
                                 {post.meta.title}
                             </h3>

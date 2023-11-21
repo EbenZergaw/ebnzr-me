@@ -40,7 +40,7 @@ function PostPage({params} : any) {
   return (
     <article className='prose lg:prose-xl mx-auto'>
         <h1 className='text-primary'>{props.frontmatter.title}</h1>
-
+        <span className="text-secondary">{props.frontmatter.date}</span>
         <MDXRemote source={props.content}></MDXRemote>
     </article>
   )
