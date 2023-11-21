@@ -48,20 +48,20 @@ export default function Home() {
         </section>
 
         <section className="mt-24">
-          <h2 className='text-3xl text-primary'>I write about product development</h2>
+          <h2 className='text-3xl text-primary font-semibold'>I write about product development</h2>
           <Image className='lg:w-1/2 mt-10' src={code} alt='Code'></Image>
         </section>
 
 
         <section className="mt-24">
-          <h2 className='text-3xl text-primary float-right'>...martial arts</h2>
+          <h2 className='text-3xl text-primary float-right font-semibold'>...martial arts</h2>
           <Image className='lg:w-1/2 mt-10 float-right' src={roundhouse} alt='Roundhouse Kick'></Image>
           <div className="clear-right"></div>
         </section>
 
 
         <section className="mt-24">
-          <h2 className='text-3xl text-primary'>...and Christianity</h2>
+          <h2 className='text-3xl text-primary font-semibold'>...and Christianity</h2>
         </section>
 
 

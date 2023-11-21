@@ -39,7 +39,7 @@ const config: Config = {
                   
           "warning": "#e11d48",
                   
-          "error": "#dc2626",
+          "error": "#FF5B5B",
         },
         light: {
           "primary": "#ff5a21", // Peach
@@ -50,7 +50,7 @@ const config: Config = {
           "info": "#7DD3FC", // Pale cyan
           "success": "#68D391", // Soft emerald
           "warning": "#F6E05E", // Soft yellow
-          "error": "#FEB2B2", // Blush pink
+          "error": "#FF4949", // Blush pink
         }
       },
     ],

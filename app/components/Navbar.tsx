@@ -49,11 +49,11 @@ function Navbar({}) {
                         <span className='ml-4'>LinkedIn</span>
                     </Link>
                     <br />
-                    <Link className='text-primary font-semibold text-xl my-2 inline-block' href='/'>
+                    {/* <Link className='text-primary font-semibold text-xl my-2 inline-block' href='/'>
                         <PiChatCircleFill className='inline text-3xl'/>
                         <span className='ml-4'>Contact</span>
                     </Link>
-                    <br />
+                    <br /> */}
                     <Link className='text-primary font-semibold text-xl my-2 inline-block' href='/posts'>
                         <IoIosDocument className='inline text-3xl'/>
                         <span className='ml-4'>Posts</span>

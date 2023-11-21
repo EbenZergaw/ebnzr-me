@@ -69,11 +69,11 @@ function Sidebar() {
                     <span className='ml-4'>LinkedIn</span>
                 </Link>
                 <br />
-                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
+                {/* <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
                     <PiChatCircleFill className='inline text-3xl'/>
                     <span className='ml-4'>Contact</span>
                 </Link>
-                <br />
+                <br /> */}
 
                 <h2 className="text-xl font-bold text-primary mt-10">Posts</h2>
                 {sortedPosts.map((post) => (
@@ -84,9 +84,21 @@ function Sidebar() {
                             </h3>
                             <span className="text-secondary">{post.meta.date}</span>
                             <div>
-                                {post.meta.tags.map((tag: string) => (
-                                    <p className='badge badge-accent mr-2' key={tag}>{tag}</p>
-                                ))}
+                                {post.meta.tags.map((tag: string) => {
+                                    
+                                    let tagClass = ''
+                                    if(tag == 'martial arts'){
+                                        tagClass = 'badge-error'
+                                    } else if (tag == 'coding'){
+                                        tagClass = 'badge-info'
+                                    } else {
+                                        tagClass = 'badge-accent'
+                                    }
+
+                                    return(
+                                    <p className={`badge ${tagClass} mr-2`} key={tag}>{tag}</p>
+                                    )
+                                })}
                             </div>
                         </div>
                     </Link>
