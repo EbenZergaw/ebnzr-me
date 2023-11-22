@@ -42,15 +42,15 @@ const config: Config = {
           "error": "#FF5B5B",
         },
         light: {
-          "primary": "#ff5a21", // Peach
-          "secondary": "#003459", // Periwinkle
-          "accent": "#9554FF", // Bright light blue
-          "neutral": "#2C3849", // Off-white
-          "base-100": "#FBECD7", // Pure white
-          "info": "#7DD3FC", // Pale cyan
-          "success": "#68D391", // Soft emerald
-          "warning": "#F6E05E", // Soft yellow
-          "error": "#FF4949", // Blush pink
+          "primary": "#ff5a21", 
+          "secondary": "#003459", 
+          "accent": "#9554FF", 
+          "neutral": "#2C3849",
+          "base-100": "#FBECD7",
+          "info": "#7DD3FC", 
+          "success": "#68D391", 
+          "warning": "#F6E05E",
+          "error": "#FF4949",
         }
       },
     ],
