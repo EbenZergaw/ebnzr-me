@@ -61,12 +61,6 @@ export default function Home() {
         </section>
 
 
-        <section className="mt-24 mx-auto">
-          <h2 className='text-3xl text-primary font-semibold'>...and Christianity</h2>
-          <Image className='lg:w-1/4 mt-10 mx-auto' src={jesus}></Image>
-        </section>
-
-
 
       </div>
 

@@ -4,6 +4,9 @@ import Sidebar from './components/Sidebar'
 import './globals.css'
 import ThemeProvider from './components/ThemeContext'
 import Footer from './components/Footer'
+import CenteredJesusComponent from './components/CenteredJesusComponent'
+import { usePathname } from 'next/navigation'
+
 
 
 export default function RootLayout({
@@ -11,8 +14,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
-  // const { theme } = useTheme();
 
   return (
     <ThemeProvider>
@@ -26,6 +27,7 @@ export default function RootLayout({
               {children}
             </main>
           </section>
+          <CenteredJesusComponent></CenteredJesusComponent>
         <Footer></Footer>
         </body>
     </ThemeProvider>
