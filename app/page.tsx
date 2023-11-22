@@ -49,7 +49,7 @@ export default function Home() {
         </section>
 
         <section className="mt-24">
-          <h2 className='text-3xl text-primary font-semibold'>I write about product development</h2>
+          <h2 className='text-3xl text-primary font-semibold'>I write about product development...</h2>
           <Image className='lg:w-1/2 mt-10' src={code} alt='Code'></Image>
         </section>
 

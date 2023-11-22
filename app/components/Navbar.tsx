@@ -23,7 +23,7 @@ function Navbar({}) {
       {theme == 'light' ? <BsMoonStarsFill /> : <RiSunFill />}
      </div>
 
-        <span className="block lg:hidden">
+        <span className="block lg:hidden header-font">
             <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="text-base-100">
                   <FaBars className='text-3xl'/>
