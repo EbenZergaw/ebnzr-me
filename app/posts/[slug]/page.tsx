@@ -44,7 +44,9 @@ function PostPage({params} : any) {
         <span className="text-secondary font-semibold">{props.frontmatter.date}</span>
         <MDXRemote 
           source={props.content}
-          components={{strong: props => <span className='text-primary font-semibold'>{props.children}</span>}}
+          components={
+            {strong: props => <span className='text-primary font-semibold'>{props.children}</span>}
+          }
         ></MDXRemote>
     </article>
   )
