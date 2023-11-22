@@ -4,8 +4,8 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className='footer p-2 bg-base-100'>
-        <div className="text-primary text-xs"
+    <footer className='footer '>
+        <div className="text-primary text-xs bg-base-100 p-2"
             onClick={() => {
                 window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
         }}>
