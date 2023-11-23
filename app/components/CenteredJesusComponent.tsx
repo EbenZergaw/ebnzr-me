@@ -11,7 +11,7 @@ function CenteredJesusComponent() {
         return (
         <section className="w-9/12 mt-24 mx-auto">
             <h2 className='text-3xl text-primary font-semibold'>...and Christianity</h2>
-            <Image className='lg:w-1/3 mt-10 mx-auto' src={jesus}></Image>
+            <Image className='lg:w-1/3 mt-10 mx-auto' src={jesus} alt='Son of God'></Image>
         </section>
         )
     } else {
