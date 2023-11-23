@@ -8,20 +8,12 @@ const ThemeContext = createContext({
 
 export const useTheme = () => useContext(ThemeContext);
 
-export const ThemeProvider = ({ children } : any ) => {
-  
-  // Initialize state with theme from local storage or default to 'dark'
+export const ThemeProvider = ({ children }: any) => {
   const [theme, setTheme] = useState(() => {
-
-    if (localStorage.getItem('theme') == null) {
-      return 'dark';
-    } else {
-      return localStorage.getItem('theme')
-    }
-
+    const storedTheme = localStorage.getItem('theme');
+    return typeof storedTheme === 'string' ? storedTheme : 'dark';
   });
 
-  // Toggle theme and save it to local storage
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
@@ -30,7 +22,6 @@ export const ThemeProvider = ({ children } : any ) => {
     }
   };
 
-  // Effect to update local storage when theme changes
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('theme', theme);
