@@ -26,7 +26,7 @@ function getPost({slug}: {slug: string}){
     }
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
     const props = getPost(params)
     return {
       title: props.frontmatter.title,
