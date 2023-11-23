@@ -10,12 +10,17 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: any) => {
 
-  if(localStorage !== undefined){
-
-    const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState(() => {
+    if(localStorage === undefined) {
+      return 'dark'
+    } else {
       const storedTheme = localStorage.getItem('theme');
       return typeof storedTheme === 'string' ? storedTheme : 'dark';
-    });
+    }
+  });
+
+  if(localStorage !== undefined){
+
   
     const toggleTheme = () => {
       const newTheme = theme === 'dark' ? 'light' : 'dark';
