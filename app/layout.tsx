@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
 
   return (
-    <ThemeProvider>
+    // <ThemeProvider>
+      <html data-theme='dark' className='dark'>
+
         <body>
           <Navbar></Navbar>
           <section className='lg:grid lg:grid-cols-6'>
@@ -29,6 +31,8 @@ export default function RootLayout({
           <CenteredJesusComponent></CenteredJesusComponent>
         <Footer></Footer>
         </body>
-    </ThemeProvider>
+
+      </html>
+    // </ThemeProvider>
   )
 }

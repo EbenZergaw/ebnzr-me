@@ -19,9 +19,9 @@ function Navbar({}) {
         <span className='lg:text-2xl text-base-100 font-semibold'>ebnzr.me</span>
       </Link>
       
-     <div className='hidden lg:block text-base-100 text-3xl lg:text-4xl' onClick={toggleTheme}>
+     {/* <div className='hidden lg:block text-base-100 text-3xl lg:text-4xl' onClick={toggleTheme}>
       {theme == 'light' ? <BsMoonStarsFill /> : <RiSunFill />}
-     </div>
+     </div> */}
 
         <span className="block lg:hidden header-font">
             <div className="dropdown dropdown-end">
@@ -59,11 +59,12 @@ function Navbar({}) {
                         <span className='ml-4'>Posts</span>
                     </Link>
                     <br />
-                    <div onClick={toggleTheme} className='text-primary font-semibold text-xl my-2 inline-block'>
+                    
+                    {/* <div onClick={toggleTheme} className='text-primary font-semibold text-xl my-2 inline-block'>
                       {theme == 'light' ? <BsMoonStarsFill className='inline text-3xl' /> : <RiSunFill className='inline text-3xl'/>}
                       <span className='inline text-xl ml-4 font-semibold'>Theme</span>
                     </div>
-                    <br />
+                    <br /> */}
 
                 </ul>
             </div>
