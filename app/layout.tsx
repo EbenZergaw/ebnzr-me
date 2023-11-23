@@ -5,7 +5,6 @@ import './globals.css'
 import ThemeProvider from './components/ThemeContext'
 import Footer from './components/Footer'
 import CenteredJesusComponent from './components/CenteredJesusComponent'
-import { usePathname } from 'next/navigation'
 
 
 
