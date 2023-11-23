@@ -8,7 +8,7 @@ const ThemeContext = createContext({
 
 export const useTheme = () => useContext(ThemeContext);
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children } : any ) => {
   
   // Initialize state with theme from local storage or default to 'dark'
   const [theme, setTheme] = useState(() => {
