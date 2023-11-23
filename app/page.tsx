@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import portrait from '../public/images/me.png'
+import portrait from '../public/images/me.PNG'
 import code from '../public/images/code.svg'
 import roundhouse from '../public/images/roundhouse.png'
 
