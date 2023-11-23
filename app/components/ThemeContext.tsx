@@ -19,6 +19,16 @@ export const ThemeProvider = ({ children }: any) => {
     }
   });
 
+  useEffect(() => {
+    if(localStorage === undefined) {
+      setTheme('dark')
+    } else {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('theme', theme);
+      }
+    }
+  }, [theme]);
+
   if(localStorage !== undefined){
 
   
@@ -29,12 +39,6 @@ export const ThemeProvider = ({ children }: any) => {
         localStorage.setItem('theme', newTheme);
       }
     };
-  
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('theme', theme);
-      }
-    }, [theme]);
   
     return (
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
