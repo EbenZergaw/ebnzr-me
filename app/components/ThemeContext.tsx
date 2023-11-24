@@ -11,7 +11,7 @@ export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }: any) => {
 
   const [theme, setTheme] = useState(() => {
-    if(localStorage === undefined) {
+    if(localStorage == undefined) {
       return 'dark'
     } else {
       const storedTheme = localStorage.getItem('theme');
@@ -20,7 +20,7 @@ export const ThemeProvider = ({ children }: any) => {
   });
 
   useEffect(() => {
-    if(localStorage === undefined) {
+    if(localStorage == undefined) {
       setTheme('dark')
     } else {
       if (typeof window !== 'undefined') {
