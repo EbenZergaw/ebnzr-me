@@ -14,9 +14,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
+
   return (
-    // <ThemeProvider>
-      <html data-theme='dark' className='dark'>
+    <ThemeProvider>
+      {/* <html data-theme={theme} className={theme}> */}
 
         <body>
           <Navbar></Navbar>
@@ -32,7 +33,7 @@ export default function RootLayout({
         <Footer></Footer>
         </body>
 
-      </html>
+      {/* </html> */}
     // </ThemeProvider>
   )
 }
