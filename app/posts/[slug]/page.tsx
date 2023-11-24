@@ -19,7 +19,7 @@ export async function generateStaticParams(){
 
 function getPost({slug}: {slug: string}){
 
-    const markdownFile = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8')
+    const markdownFile = fs.readFileSync(path.join('posts', slug + 'mdx'), 'utf-8')
     
     const {data: frontmatter, content} = matter(markdownFile)
     return{
@@ -30,7 +30,7 @@ function getPost({slug}: {slug: string}){
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  
+
     const props = getPost(params)
 
     return {
