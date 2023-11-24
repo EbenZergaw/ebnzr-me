@@ -11,7 +11,7 @@ export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }: any) => {
 
   const [theme, setTheme] = useState(() => {
-    if(localStorage == undefined) {
+    if(localStorage == undefined || localStorage.getItem('theme') == undefined || localStorage.getItem('theme') == null) {
       return 'dark'
     } else {
       const storedTheme = localStorage.getItem('theme');
