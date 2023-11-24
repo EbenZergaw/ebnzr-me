@@ -7,7 +7,6 @@ import Footer from './components/Footer'
 import CenteredJesusComponent from './components/CenteredJesusComponent'
 
 
-
 export default function RootLayout({
   children,
 }: {
