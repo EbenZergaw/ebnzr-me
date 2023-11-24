@@ -7,59 +7,34 @@ const ThemeContext = createContext({
 });
 
 export const useTheme = () => useContext(ThemeContext);
-
 export const ThemeProvider = ({ children }: any) => {
+  // Initialize state with a default value
+  const [theme, setTheme] = useState('dark');
 
-  const [theme, setTheme] = useState(() => {
-    if(typeof window == undefined || localStorage.getItem('theme') == null) {
-      return 'dark'
-    } else {
-      const storedTheme = localStorage.getItem('theme');
-      return typeof storedTheme === 'string' ? storedTheme : 'dark';
-    }
-  });
-
+  // After component mounts, update the state with the value from localStorage
   useEffect(() => {
-    if(localStorage == undefined) {
-      setTheme('dark')
-    } else {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('theme', theme);
-      }
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
     }
+  }, []);
+
+  // Update localStorage whenever the theme changes
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
-  if(localStorage !== undefined){
+  // Function to toggle the theme
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  };
 
-  
-    const toggleTheme = () => {
-      const newTheme = theme === 'dark' ? 'light' : 'dark';
-      setTheme(newTheme);
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('theme', newTheme);
-      }
-    };
-  
-    return (
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <html data-theme={theme} className={theme}>
-          {children}
-        </html>
-      </ThemeContext.Provider>
-    );
-
-  } else {
-    const theme = 'dark'
-    const toggleTheme = () => {}
-    return (
-      <ThemeContext.Provider value={{theme, toggleTheme}}>
-        <html data-theme={'dark'} className={'dark'}>
-          {children}
-        </html>
-      </ThemeContext.Provider>
-    );
-  }
-
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <html data-theme={theme} className={theme}>
+        {children}
+      </html>
+    </ThemeContext.Provider>
+  );
 };
-
-export default ThemeProvider;
