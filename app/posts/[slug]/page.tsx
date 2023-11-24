@@ -17,17 +17,23 @@ import Link from 'next/link'
 //     return paths
 // }
 
-function getPost({slug}: {slug: string}){
-
-    const markdownFile = fs.readFileSync(path.join('public/posts', slug + '.mdx'), 'utf-8')
-    
-    const {data: frontmatter, content} = matter(markdownFile)
-    return{
-        frontmatter,
-        slug,
-        content
-    }
+function getPost({slug}: {slug: string}) {
+  // Construct the full path to the markdown file using process.cwd()
+  const fullPath = path.join(process.cwd(), 'posts', `${slug}.mdx`);
+  
+  // Read the markdown file
+  const markdownFile = fs.readFileSync(fullPath, 'utf-8');
+  
+  // Use gray-matter to parse the markdown file
+  const {data: frontmatter, content} = matter(markdownFile);
+  
+  return {
+      frontmatter,
+      slug,
+      content
+  };
 }
+
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
 

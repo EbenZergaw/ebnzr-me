@@ -9,10 +9,10 @@ import { GoPersonFill } from "react-icons/go";
 import { PiChatCircleFill } from "react-icons/pi";
 
 function Sidebar() {
-    const files = fs.readdirSync(path.join("public/posts"))
+    const files = fs.readdirSync(path.join("posts"))
 
     const posts = files.map(filename => {
-        const fileContent = fs.readFileSync(path.join("public/posts", filename), 'utf-8')
+        const fileContent = fs.readFileSync(path.join("posts", filename), 'utf-8')
 
         const {data: frontmatter} = matter(fileContent)
 
