@@ -4,10 +4,10 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 function page() {
-    const files = fs.readdirSync(path.join("posts"))
+    const files = fs.readdirSync(path.join("public/posts"))
 
     const posts = files.map(filename => {
-        const fileContent = fs.readFileSync(path.join("posts", filename), 'utf-8')
+        const fileContent = fs.readFileSync(path.join("public/posts", filename), 'utf-8')
 
         const {data: frontmatter} = matter(fileContent)
 
