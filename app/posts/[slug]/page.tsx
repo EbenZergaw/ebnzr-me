@@ -11,7 +11,7 @@ export async function generateStaticParams(){
     const files = fs.readdirSync(path.join('posts'))
 
     const paths = files.map(filename => ({
-        slug: filename.replace('mdx', '')
+        slug: filename.replace('mdx', '.')
     }))
 
     return paths
@@ -19,7 +19,7 @@ export async function generateStaticParams(){
 
 function getPost({slug}: {slug: string}){
 
-    const markdownFile = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8')
+    const markdownFile = fs.readFileSync(path.join('posts', slug + 'mdx'), 'utf-8')
     
     const {data: frontmatter, content} = matter(markdownFile)
     return{
