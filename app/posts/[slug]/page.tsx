@@ -19,7 +19,7 @@ import Link from 'next/link'
 
 function getPost({slug}: {slug: string}){
 
-    const markdownFile = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8')
+    const markdownFile = fs.readFileSync(path.join('public/posts', slug + '.mdx'), 'utf-8')
     
     const {data: frontmatter, content} = matter(markdownFile)
     return{
