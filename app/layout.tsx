@@ -15,7 +15,6 @@ export default function RootLayout({
 
   return (
     <ThemeProvider>
-      {/* <html data-theme={theme} className={theme}> */}
 
         <body>
           <Navbar></Navbar>
@@ -32,6 +31,6 @@ export default function RootLayout({
         </body>
 
       {/* </html> */}
-    // </ThemeProvider>
+    </ThemeProvider>
   )
 }
