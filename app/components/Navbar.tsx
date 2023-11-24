@@ -60,11 +60,11 @@ function Navbar({}) {
                     </Link>
                     <br />
 
-                    {/* <div onClick={toggleTheme} className='text-primary font-semibold text-xl my-2 inline-block'>
+                    <div onClick={toggleTheme} className='text-primary font-semibold text-xl my-2 inline-block'>
                       {theme == 'light' ? <BsMoonStarsFill className='inline text-3xl' /> : <RiSunFill className='inline text-3xl'/>}
                       <span className='inline text-xl ml-4 font-semibold'>Theme</span>
                     </div>
-                    <br /> */}
+                    <br />
 
                 </ul>
             </div>
