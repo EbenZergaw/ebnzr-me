@@ -2,7 +2,7 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import './globals.css'
-import ThemeProvider from './components/ThemeContext'
+import {ThemeProvider} from './components/ThemeContext'
 import Footer from './components/Footer'
 import CenteredJesusComponent from './components/CenteredJesusComponent'
 
