@@ -14,7 +14,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-
   return (
     <ThemeProvider>
       {/* <html data-theme={theme} className={theme}> */}
