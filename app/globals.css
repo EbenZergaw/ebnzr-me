@@ -35,7 +35,7 @@ svg{
 }
 
 h1, h2, h3, .header-font{
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Chakra Petch', sans-serif !important;
 }
 
 h1, h2, h3{
