@@ -5,7 +5,7 @@ import './globals.css'
 import {ThemeProvider} from './components/ThemeContext'
 import Footer from './components/Footer'
 import CenteredJesusComponent from './components/CenteredJesusComponent'
-
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -28,6 +28,7 @@ export default function RootLayout({
           </section>
           <CenteredJesusComponent></CenteredJesusComponent>
         <Footer></Footer>
+        <Analytics />
         </body>
 
       {/* </html> */}
