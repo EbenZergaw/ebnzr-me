@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import './globals.css'
+import './text.css'
 import {ThemeProvider} from './components/ThemeContext'
 import Footer from './components/Footer'
 import CenteredJesusComponent from './components/CenteredJesusComponent'
@@ -31,7 +32,6 @@ export default function RootLayout({
         <Analytics />
         </body>
 
-      {/* </html> */}
     </ThemeProvider>
   )
 }
