@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
 
 .dark{
     background-image: url('../public/images/pattern.png');
@@ -35,7 +36,7 @@ svg{
 }
 
 h1, h2, h3, .header-font{
-    font-family: 'Chakra Petch', sans-serif !important;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 h1, h2, h3{

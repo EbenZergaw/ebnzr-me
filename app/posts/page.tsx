@@ -42,7 +42,7 @@ function page() {
     });
   return (
     <div>
-        <h1 className="text-3xl text-primary">Posts</h1>
+        <h1 className="text-3xl text-primary font-bold">Posts</h1>
         
         <div className="lg:w-1/2">
             {sortedPosts.map((post) => (
