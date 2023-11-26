@@ -2,6 +2,7 @@ import Image from 'next/image'
 import portrait from '../public/images/portrait.png'
 import code from '../public/images/code.svg'
 import roundhouse from '../public/images/roundhouse.png'
+import SkillsList from './components/SkillsList'
 import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
@@ -32,6 +33,8 @@ export default function Home() {
           <Image className='lg:w-3/4 ' src={portrait} alt='Ebenezer Zergabachew'></Image>
           
         </section>
+
+        <SkillsList></SkillsList>
 
         <section className="mt-24">
           <h2 className='text-3xl text-primary font-semibold'>I write about product development...</h2>
