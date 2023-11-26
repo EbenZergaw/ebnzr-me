@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 
 function PostPage({params} : any) {
-  console.log(params)
+  
     const props = getPost(params)
     
   return (
