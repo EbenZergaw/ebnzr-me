@@ -3,7 +3,7 @@ import React from 'react'
 
 function SkillsList() {
 
-    const skills = `https://skillicons.dev/icons?i=js,html,css,typescript,react,nextjs,firebase,ps,prisma,tailwind,vscode,nodejs&perline=6`
+    const skills = `https://skillicons.dev/icons?i=html,css,js,typescript,tailwind,react,nextjs,nodejs,prisma,firebase,ps,figma,express,vscode,&perline=7`
 
 
   return (
