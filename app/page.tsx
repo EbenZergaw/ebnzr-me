@@ -26,17 +26,17 @@ export default function Home() {
                 Ebenezer Zergabachew</div>
             </h1>
             <br />
-            <p className='text-xl'>I'm a student at Virginia Tech with an interest in business and technology.</p>
+            <p className='text-xl lg:w-3/4'>I'm from Addis Ababa, Ethiopia. I'm currently a student at Virginia Tech with a passion for business and technology.</p>
             <br />
           </div>
 
-          <Image className='lg:w-3/4 ' src={portrait} alt='Ebenezer Zergabachew'></Image>
+          <Image className='lg:w-3/4 mt-10' src={portrait} alt='Ebenezer Zergabachew'></Image>
           
         </section>
 
         <SkillsList></SkillsList>
 
-        <section className="mt-24">
+        <section className="mt-14">
           <h2 className='text-3xl text-primary font-semibold'>I write about product development...</h2>
           <Image className='lg:w-1/2 mt-10' src={code} alt='Code'></Image>
         </section>
