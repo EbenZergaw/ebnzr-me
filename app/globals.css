@@ -43,6 +43,10 @@ h1, h2, h3{
     color: #ff5a21 !important;
 }
 
+img {
+    border-radius: 10px;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 6px;
