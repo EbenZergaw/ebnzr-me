@@ -54,6 +54,8 @@ function PostPage({params} : any) {
     <article className='prose lg:prose-xl mx-auto'>
         <h1 className='text-primary'>{props.frontmatter.title}</h1>
         <span className="text-secondary font-semibold">{props.frontmatter.date}</span>
+        <br />
+        <span className="text-accent font-normal">Ebenezer Zergabachew</span>
         <MDXRemote 
           source={props.content}
           components={
