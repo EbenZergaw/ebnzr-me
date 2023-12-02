@@ -52,7 +52,7 @@ function Sidebar() {
             <div className="hidden lg:block header-font">
                 <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
                     <GoPersonFill className='inline text-3xl'/>
-                    <span className='ml-4'>About</span>
+                    <span className='ml-4'>Me</span>
                 </Link>
                 <br />
                 <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' 
