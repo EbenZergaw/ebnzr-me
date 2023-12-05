@@ -19,14 +19,13 @@ export default function Home() {
 
         <section className="lg:grid lg:grid-cols-2">
           <div className="text-xl font-semibold">
-          Hello I'm 
-            <h1>
-              <div className="text-3xl text-primary">
-                <br />
-                Ebenezer Zergabachew</div>
+            Hello I'm
+
+            <h1 className="text-3xl text-primary mt-8">
+                Ebenezer Zergabachew
             </h1>
-            <br />
-            <p className='text-xl lg:w-3/4'>I'm from Addis Ababa, Ethiopia. I'm currently a student at Virginia Tech with a passion for business and technology.</p>
+            
+            <p className='text-xl lg:w-3/4 mt-8'>I'm from Addis Ababa, Ethiopia. I'm currently a student at Virginia Tech with a passion for business and technology.</p>
             <br />
           </div>
 

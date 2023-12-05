@@ -6,7 +6,7 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import { GoPersonFill } from "react-icons/go";
-import { PiChatCircleFill } from "react-icons/pi";
+import SidebarTabs from './SidebarTabs'
 
 function Sidebar() {
     const files = fs.readdirSync(path.join("posts"))
@@ -50,32 +50,11 @@ function Sidebar() {
         <div className='mt-14 ml-4'>
 
             <div className="hidden lg:block header-font">
-                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
-                    <GoPersonFill className='inline text-3xl'/>
-                    <span className='ml-4'>Me</span>
-                </Link>
-                <br />
-                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' 
-                    href='https://github.com/EbenZergaw'
-                    target='_blank'>
-                    <ImGithub className='inline text-3xl'/>
-                    <span className='ml-4'>Github</span>
-                </Link>
-                <br />
-                <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' 
-                    href='https://www.linkedin.com/in/ebenezer-zergabachew/' 
-                    target='_blank'>
-                    <ImLinkedin className='inline text-3xl'/>
-                    <span className='ml-4'>LinkedIn</span>
-                </Link>
-                <br />
-                {/* <Link className='transition-all text-neutral font-bold text-xl my-2 inline-block hover:text-primary' href='/'>
-                    <PiChatCircleFill className='inline text-3xl'/>
-                    <span className='ml-4'>Contact</span>
-                </Link>
-                <br /> */}
+                <SidebarTabs></SidebarTabs>
+                
 
-                <h2 className="text-xl font-bold text-primary mt-10">Posts</h2>
+                <div className="text-xl font-bold text-primary mt-10">Posts</div>
+                
                 {sortedPosts.map((post) => (
                     <Link href={`/posts/${post.slug}`} passHref key={post.slug}>
                         <div className='transition-all border hover:border-primary border-base-100 rounded-lg my-4 p-2 mb-4 w-11/12'>
