@@ -47,6 +47,19 @@ img {
     border-radius: 10px;
 }
 
+.blur{
+    filter: blur(2px);
+    transition: 0.4s;
+}
+
+section{
+    transition: 0.4s;
+}
+
+#modal{
+    z-index: 9999;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 6px;
