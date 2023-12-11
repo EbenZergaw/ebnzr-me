@@ -81,7 +81,7 @@ function Navbar({}) {
             
             <ul tabIndex={0} className="flex flex-col items-center"> 
                 
-                <Link className='transition-all text-primary font-medium justify-between w-1/2 text-xl my-2' href='/'>
+                <Link className={`transition-all font-medium justify-between w-1/2 text-xl my-2 ${pathname == '/' ? 'text-accent' : 'text-primary'}`} href='/'>
                     <GoPersonFill className='inline text-3xl'/>
                     <span className='ml-8'>About</span>
                 </Link>
@@ -106,7 +106,7 @@ function Navbar({}) {
                     <span className='ml-8'>Contact</span>
                 </Link> */}
                 
-                <Link className='transition-all text-primary font-medium justify-between w-1/2 text-xl my-2' href='/posts'>
+                <Link className={`transition-all font-medium justify-between w-1/2 text-xl my-2 ${pathname == '/posts' ? 'text-accent' : 'text-primary'}`} href='/posts'>
                     <IoIosDocument className='inline text-3xl'/>
                     <span className='ml-8'>Posts</span>
                 </Link>
