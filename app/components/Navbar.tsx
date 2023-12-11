@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState, useRef} from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 import { HiOutlineMenu } from "react-icons/hi";
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import { GoPersonFill } from "react-icons/go";
@@ -13,7 +14,7 @@ import { RiSunFill } from "react-icons/ri";
 function Navbar({}) {
   const { toggleTheme, theme } = useTheme();
   const [mobileNavbarView, setMobileNavbarView] = useState(false);
-
+  const pathname = usePathname()
 
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -46,6 +47,11 @@ function Navbar({}) {
       document.body.classList.remove('blur');
     };
   }, [mobileNavbarView]);
+
+  useEffect(() => {
+    setMobileNavbarView(false)
+  }, [pathname])
+
 
   return (
     <nav className="bg-primary p-6 flex items-center justify-between">
