@@ -120,7 +120,7 @@ function Navbar({}) {
                   onClick={() => {
                       window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
                 }}>
-                  Secret Sauce
+                  Click for Secret Sauce
               </div>
             </ul>
 
