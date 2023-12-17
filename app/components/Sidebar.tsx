@@ -66,7 +66,7 @@ function Sidebar() {
                                 {post.meta.tags.map((tag: string) => {
                                     
                                     let tagClass = ''
-                                    if(tag == 'martial arts'){
+                                    if(tag == 'martial arts' || tag == 'combat crafter'){
                                         tagClass = 'badge-error'
                                     } else if (tag == 'coding'){
                                         tagClass = 'badge-info'
