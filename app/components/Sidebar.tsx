@@ -4,8 +4,6 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import { ImGithub, ImLinkedin } from "react-icons/im";
-import { GoPersonFill } from "react-icons/go";
 import SidebarTabs from './SidebarTabs'
 
 function Sidebar() {
