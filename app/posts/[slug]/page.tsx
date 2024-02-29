@@ -59,7 +59,7 @@ function PostPage({params} : any) {
         <MDXRemote 
           source={props.content}
           components={
-            {strong: props => <span className='text-primary font-semibold'>{props.children}</span>}
+            {strong: props => <span className='text-accent underline font-semibold'>{props.children}</span>}
           }
         ></MDXRemote>
     </article>
