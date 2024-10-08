@@ -53,8 +53,8 @@ function page() {
     return dateB.getTime() - dateA.getTime(); // Descending order
   });
   return (
-    <div className="w-[90%] mx-auto">
-      <h1 className="text-3xl text-primary font-bold">Posts</h1>
+    <div className="w-[70%] mx-auto">
+      <h1 className="text-3xl text-primary font-bold">Blog</h1>
 
       <div className="w-[100%] mx-auto">
         {sortedPosts.map((post) => (
@@ -68,7 +68,7 @@ function page() {
                 <h3 className="text-lg font-normal hover:font-medium text-primary">
                     {post.meta.title}
                 </h3>
-                <span className="text-secondary font-light !text-gray-300">{post.meta.date}</span>
+                <span className="text-secondary font-light !dark:text-gray-300">{post.meta.date}</span>
                 </div>
                 <div className="flex">
                 {post.meta.tags.map((tag: string) => {

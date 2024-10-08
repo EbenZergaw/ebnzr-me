@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 // export async function generateStaticParams(){
 
@@ -56,32 +57,36 @@ const components = {
     
     a: (props: any) => (
       <a 
-        className="text-indigo-500 underline hover:text-indigo-700" 
+        className="text-[#1FA9FF] underline hover:text-blue-300" 
         {...props} 
       />
     ),
 
     u: (props: any) => <u className="underline !text-green-600" {...props} />,
 
-    p: (props: any) => <p className="my-4" {...props} />
+    p: (props: any) => <p className="mb-4 text-lg tracking-normal leading-10" {...props} />
   };
   
 function PostPage({ params }: any) {
   const props = getPost(params);
 
   return (
-    <article className="prose lg:prose-xl mx-auto w-[90%] mx-auto">
-      <h1 className="font-bold text-3xl mb-2">{props.frontmatter.title}</h1>
-      <span className="text-secondary font-semibold">
-        {props.frontmatter.date}
-      </span>
-      <br />
-      <span className="text-accent font-normal">Ebenezer Zergabachew</span>
-      <MDXRemote
-        source={props.content}
-        components={components}
-      ></MDXRemote>
-    </article>
+    <TracingBeam>
+        <article className="w-[70%] mx-auto">
+        <h1 className="font-bold text-3xl mb-2">{props.frontmatter.title}</h1>
+        <span className="text-lg font-semibold">
+            {props.frontmatter.date}
+        </span>
+        <br />
+        <span className="text-accent font-normal">Ebenezer Zergabachew</span>
+        <div className="mt-8"></div>
+
+        <MDXRemote
+            source={props.content}
+            components={components}
+        ></MDXRemote>
+        </article>
+    </TracingBeam>
   );
 }
 

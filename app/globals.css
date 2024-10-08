@@ -14,7 +14,7 @@ div, p, span {
   font-family: "Inter", sans-serif;
 }
 
-.dark h1, .dark h2, .dark h3, .chakra{
+.dark h1, .dark h2, .dark h3, .dark .chakra{
   background: linear-gradient(180deg, white, #999999);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,7 +24,7 @@ div, p, span {
   color: #B9C3DE;
 }
 
-.light div, p, span {
+.light div, .light p, .light span {
   color: black
 }
 
