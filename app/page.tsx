@@ -6,7 +6,7 @@ import { Linkedin, Twitter, Mail, Github } from "lucide-react";
 export default function Home() {
   return (
     <div className="lg:w-full w-[95%]">
-      <div className="lg:w-[70%] mx-auto rounded-md relative lg:flex flex-col antialiased mt-20">
+      <div className="lg:w-[70%] mx-auto rounded-md relative lg:flex flex-col antialiased">
         
         {/* HERO */}
         <div className="lg:flex items-center justify-between w-full">
@@ -15,7 +15,7 @@ export default function Home() {
           
           <div className="w-[95%] mx-auto text-[22px] text-wrap lg:ml-20">
             Hello, I'm
-            <h1 className="text-3xl my-8">Ebenezer Zergabachew</h1>
+            <h1 className="text-3xl font-bold my-8">Ebenezer Zergabachew</h1>
             <p className="lg:w-1/2">
               I'm from Addis Ababa, Ethiopia. I'm currently a student at
               Virginia Tech with a passion for business, technology, and martial
@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="text-3xl my-8 w-[95%] lg:mx-0 mx-auto ">About Me</h2>
+        <h2 className="text-3xl my-8 w-[95%] lg:mx-0 mx-auto font-bold">About Me</h2>
         <p className="text-[22px] lg:w-2/3 w-[95%] lg:mx-0 mx-auto ">
           I’m currently pursuing a degree in Philosophy, Politics, and Economics
           at Virginia Tech. In between classes, I lead the entrepreneurship club

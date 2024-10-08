@@ -21,7 +21,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning className={`wrapper`}>
-      <body>
+      <body className="pb-20">
         <ThemeProvider>
           <Navbar />
           {children}
