@@ -53,46 +53,45 @@ function page() {
     return dateB.getTime() - dateA.getTime(); // Descending order
   });
   return (
-    <div className="w-[70%] mx-auto">
+    <div className="lg:w-[70%] w-[90%] mx-auto">
       <h1 className="text-3xl text-primary font-bold">Blog</h1>
 
       <div className="w-[100%] mx-auto">
         {sortedPosts.map((post) => (
-          <Link
-            href={`/blog/${post.slug}`}
-            passHref
-            key={post.slug}
-          >
+          <Link href={`/blog/${post.slug}`} passHref key={post.slug}>
             <div className="my-10">
-                <div className="flex items-center justify-between">
-                <h3 className="text-lg font-normal hover:font-medium text-primary">
-                    {post.meta.title}
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-normal hover:font-medium text-primary max-w-[70%]">
+                  {post.meta.title}
                 </h3>
-                <span className="text-secondary font-light !dark:text-gray-300">{post.meta.date}</span>
-                </div>
-                <div className="flex">
+                <span className="text-secondary font-light !dark:text-gray-300 text-right">
+                  {post.meta.date}
+                </span>
+              </div>
+
+              <div className="flex">
                 {post.meta.tags.map((tag: string) => {
-                    let tagClass = "";
-                    if (tag == "martial arts") {
+                  let tagClass = "";
+                  if (tag == "martial arts") {
                     tagClass = "!text-[#F7625C]";
-                    } else if (
+                  } else if (
                     tag == "coding" ||
                     tag == "technology" ||
                     tag == "product" ||
                     tag == "startups"
-                    ) {
+                  ) {
                     tagClass = "!text-[#1FA9FF]";
-                    } else if (tag == "philosophy") {
+                  } else if (tag == "philosophy") {
                     tagClass = "!text-[#FF9900]";
-                    }
+                  }
 
-                    return (
+                  return (
                     <p className={`font-thin ${tagClass} mr-2`} key={tag}>
-                        #{tag}
+                      #{tag.replace(/ /g, "-")}
                     </p>
-                    );
+                  );
                 })}
-                </div>
+              </div>
             </div>
           </Link>
         ))}
