@@ -22,7 +22,7 @@ function Navbar() {
           {LINKS.map((link) => {
             return (
               <Link href={link.href} key={link.href}>
-                <span className={`hover:font-medium chakra ${pathname == link.href ? "font-medium" : ''}`}>{link.label}</span>
+                <span className={`hover:font-medium chakra ${pathname.includes(link.href) ? "font-medium" : ''}`}>{link.label}</span>
               </Link>
             );
           })}

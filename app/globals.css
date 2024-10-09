@@ -28,8 +28,12 @@ div, p, span {
   color: black
 }
 
+.transitionS {
+  transition: 400ms ease;
+}
+
 .wrapper {
-  transition: background-color 400ms ease;
+  transition: 400ms ease;
 }
 
 /* Light mode */
