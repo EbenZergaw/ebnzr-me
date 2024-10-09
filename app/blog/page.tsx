@@ -17,8 +17,12 @@ function page() {
     };
   });
 
-  // Function to convert the custom date string to a standard format
   function standardizeDate(dateStr: string): string {
+    if (!dateStr) {
+      console.error("Date string is missing in frontmatter");
+      return "1970-01-01"; // Fallback date (can be anything suitable for your use case)
+    }
+
     const months = [
       "January",
       "February",
@@ -34,9 +38,15 @@ function page() {
       "December",
     ];
     const parts = dateStr.split(" ");
+    if (parts.length !== 3) {
+      console.error("Invalid date format in frontmatter:", dateStr);
+      return "1970-01-01"; // Fallback date for unexpected formats
+    }
+
     const month = months.indexOf(parts[0]) + 1;
     const day = parseInt(parts[1]);
     const year = parseInt(parts[2]);
+
     return `${year}-${month}-${day}`;
   }
 
@@ -46,12 +56,12 @@ function page() {
     return new Date(standardizedDateStr);
   }
 
-  // Sort the posts by date in descending order
   const sortedPosts = posts.sort((a, b) => {
-    const dateA = parseDate(a.meta.date);
-    const dateB = parseDate(b.meta.date);
+    const dateA = a.meta.date ? parseDate(a.meta.date) : new Date(0);
+    const dateB = b.meta.date ? parseDate(b.meta.date) : new Date(0);
     return dateB.getTime() - dateA.getTime(); // Descending order
   });
+
   return (
     <div className="lg:w-[70%] w-[90%] mx-auto">
       <h1 className="text-3xl text-primary font-bold">Blog</h1>
@@ -60,8 +70,8 @@ function page() {
         {sortedPosts.map((post) => (
           <Link href={`/blog/${post.slug}`} passHref key={post.slug}>
             <div className="my-10">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-normal hover:font-medium text-primary max-w-[70%]">
+              <div className="lg:flex items-center justify-between">
+                <h3 className="text-lg font-normal hover:font-medium text-nowrap text-primary max-w-[70%]">
                   {post.meta.title}
                 </h3>
                 <span className="text-secondary font-light !dark:text-gray-300 text-right">
@@ -70,18 +80,18 @@ function page() {
               </div>
 
               <div className="flex">
-                {post.meta.tags.map((tag: string) => {
+                {post.meta.tags?.map((tag: string) => {
                   let tagClass = "";
-                  if (tag == "martial arts") {
+                  if (tag === "martial arts") {
                     tagClass = "!text-[#F7625C]";
                   } else if (
-                    tag == "coding" ||
-                    tag == "technology" ||
-                    tag == "product" ||
-                    tag == "startups"
+                    tag === "coding" ||
+                    tag === "technology" ||
+                    tag === "product" ||
+                    tag === "startups"
                   ) {
                     tagClass = "!text-[#1FA9FF]";
-                  } else if (tag == "philosophy") {
+                  } else if (tag === "philosophy") {
                     tagClass = "!text-[#FF9900]";
                   }
 
@@ -90,7 +100,9 @@ function page() {
                       #{tag.replace(/ /g, "-")}
                     </p>
                   );
-                })}
+                }) || (
+                  <p className="font-thin text-gray-500">No tags available</p>
+                )}
               </div>
             </div>
           </Link>

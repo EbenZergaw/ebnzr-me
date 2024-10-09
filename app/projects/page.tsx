@@ -33,7 +33,7 @@ export default function Projects() {
   return (
     <div className="lg:w-[70%] w-[90%] mx-auto">
       <h1 className="text-3xl font-bold">Projects</h1>
-      <div className="text-xl mt-6 w-[70%]">
+      <div className="text-xl mt-6 lg:w-[70%]">
         Here's a collection of some of the stuff I’ve worked on. Products I’ve
         built, designs I’ve worked on, and projects I’ve run.
         <br />
@@ -135,7 +135,7 @@ export default function Projects() {
                 lg:saturate-0 lg:blur-[2px] hover:blur-0 hover:saturate-100 transitionS relative p-0 flex flex-col 
                 border ${card.borderClass}
                 lg:opacity-15 hover:opacity-100
-                rounded-xl cursor-pointer ${card.layout} 
+                rounded-xl !cursor-pointer ${card.layout} 
               `}
               style={{
                 backgroundImage: `url(${card.src})`,
@@ -144,7 +144,7 @@ export default function Projects() {
               }}
             >
               {/* Overlay content */}
-              <div className="absolute top-5 left-5 inset-0 z-40">
+              <div className="absolute top-5 left-5 inset-0 !cursor-pointer">
                 <h3
                   className={`font-semibold light:text-black text-xl ${card.titleClass}`}
                 >
@@ -164,7 +164,7 @@ const cards = [
   {
     title: "Combat Crafter",
     titleClass: "text-red-700",
-    borderClass: "border-red-700",
+    borderClass: "border-red-900 red-glow",
     description: `A game development project I worked on.`,
     src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728435589/aoa6t8qgx0cqbixzsh76.png",
     ctaText: "Learn More",
@@ -175,7 +175,7 @@ const cards = [
     description: "The entrepreneurship club's rapid startup competition.",
     title: "",
     titleClass: "",
-    borderClass: "border-purple-600",
+    borderClass: "border-purple-600 purple-glow",
     src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728436415/ua2r1ox0vdr3edvl2gt3.png",
     ctaText: "Learn More",
     ctaLink: "#",
@@ -185,7 +185,7 @@ const cards = [
     description: "Various designs and artworks I’ve created.",
     title: "",
     titleClass: "text-blue-600",
-    borderClass: "border-blue-[#67A6E3]",
+    borderClass: "border-blue-[#67A6E3] dark:border-blue-600 blue-glow",
     src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728442514/rgtahykdp1qoapixjnjc.png",
     ctaText: "Learn More",
     ctaLink: "#",
