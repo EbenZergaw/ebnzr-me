@@ -135,7 +135,7 @@ const cards = [
   {
     title: "Combat Crafter",
     titleClass: "text-red-700",
-    borderClass: "border-red-900 red-glow",
+    borderClass: "border-red-900 red-glow bg-white dark:bg-[#0B0E13]",
     description: `A game development project I worked on.`,
     src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728435589/aoa6t8qgx0cqbixzsh76.png",
     ctaText: "Learn More",

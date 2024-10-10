@@ -50,6 +50,8 @@ const components = {
     h1: (props: any) => <h1 className="font-bold text-3xl" {...props} />,
     
     h2: (props: any) => <h2 className="font-bold text-2xl mt-4" {...props} />,
+
+    h3: (props: any) => <h2 className="font-bold text-2xl mt-4" {...props} />,
     
     strong: (props: any) => <strong className="font-semibold" {...props} />,
     
@@ -71,8 +73,8 @@ function PostPage({ params }: any) {
   const props = getPost(params);
 
   return (
-    <TracingBeam>
-        <article className="w-[70%] mx-auto">
+    <>
+        <article className="lg:w-[40%] mx-auto">
         <h1 className="font-bold text-3xl mb-2">{props.frontmatter.title}</h1>
         <span className="text-lg font-semibold">
             {props.frontmatter.date}
@@ -86,7 +88,7 @@ function PostPage({ params }: any) {
             components={components}
         ></MDXRemote>
         </article>
-    </TracingBeam>
+    </>
   );
 }
 

@@ -86,7 +86,7 @@ export const TracingBeam = ({
           className=" ml-4 block"
           aria-hidden="true"
         >
-          <motion.path
+          {/* <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
             fill="none"
             stroke="#9091A0"
@@ -94,12 +94,12 @@ export const TracingBeam = ({
             transition={{
               duration: 10,
             }}
-          ></motion.path>
+          ></motion.path> */}
           <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
             fill="none"
             stroke="url(#gradient)"
-            strokeWidth="1.25"
+            strokeWidth="1"
             className="motion-reduce:hidden"
             transition={{
               duration: 10,
