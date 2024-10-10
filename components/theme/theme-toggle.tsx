@@ -8,9 +8,16 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className="flex flex-col justify-center ml-3 cursor-pointer">
-      <Sun className='hidden dark:block' onClick={() => setTheme('light')}/>
-      <Moon className='dark:hidden block' onClick={() => setTheme('dark')}/>
+    <div className="flex flex-col justify-center ml-3 cursor-pointer " onClick={() => {
+      if(theme == 'dark'){
+        setTheme('light')
+      } else {
+        setTheme('dark')
+      }
+    }}>
+      {
+        theme == 'dark' ? <Sun className=''/> : <Moon className=''/>
+      }
     </div>
   )
 }

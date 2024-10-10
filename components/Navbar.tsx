@@ -11,7 +11,7 @@ function Navbar() {
   const LINKS = [
     { href: "/", label: "About" },
     { href: "/projects", label: "Projects" },
-    { href: "/blog", label: "Blog" },
+    { href: "/posts", label: "Blog" },
   ];
 
   return (
