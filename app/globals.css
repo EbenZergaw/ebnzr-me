@@ -20,6 +20,13 @@ div, p, span {
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 768px) {
+  .dark h1, .dark h2, .dark h3, .dark .chakra {
+    background: none; /* Remove the gradient */
+    -webkit-text-fill-color: rgb(226, 226, 226); /* Make the text white */
+  }
+}
+
 .dark div, .dark p, .dark span {
   color: #B9C3DE;
 }

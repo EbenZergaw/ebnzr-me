@@ -63,10 +63,10 @@ export default function Projects() {
             <div
               ref={ref}
               className={`
-                border borde r-black 
+                border
                 w-full lg:max-w-[90%] lg:h-[90vh] h-[100vh]
-                flex flex-col bg-white dark:bg-[#0B0E13] ${active.borderClass}
-                overflow-scroll z-50 lg:rounded-md border-0 lg:border
+                flex flex-col backdrop-blur-2xl dark:bg-[#0B0E13] 
+                overflow-scroll z-50 lg:rounded-md border-0 lg:border dark:border-[#545454]
                 `}
             >
               <div className="h-full">
@@ -102,7 +102,7 @@ export default function Projects() {
               className={`
                 lg:saturate-0 lg:blur-[0.3px] hover:blur-0 hover:saturate-100 transitionQ relative p-0 flex flex-col ease-in-out
                 border ${card.borderClass}
-                lg:opacity-30 lg:dark:opacity-60 hover:opacity-100
+                lg:opacity-30 lg:dark:opacity-50 hover:opacity-100 hover:lg:dark:opacity-100
                 rounded-xl !cursor-pointer ${card.layout} 
               `}
               style={{

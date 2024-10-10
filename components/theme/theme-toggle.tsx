@@ -8,7 +8,7 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className="flex flex-col justify-center ml-3 cursor-pointer " onClick={() => {
+    <div className="flex flex-col justify-center lg:ml-3 cursor-pointer " onClick={() => {
       if(theme == 'dark'){
         setTheme('light')
       } else {

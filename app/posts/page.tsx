@@ -72,7 +72,7 @@ function page() {
           <Link href={`/posts/${post.slug}`} passHref key={post.slug} className="cursor-pointer">
             <div className="my-8 pl-2 border-black dark:border-[#B9C2DE] dark:hover:border-white hover:border-l-2 cursor-pointer">
               <div className="lg:flex items-center justify-between">
-                <h3 className="text-lg font-normal text-no wrap text-primary w-[70%]">
+                <h3 className="text-lg font-normal text-primary lg:w-[70%] leading-6">
                   {post.meta.title}
                 </h3>
                 <span className="text-secondary font-light !dark:text-gray-300 text-right">
@@ -80,7 +80,7 @@ function page() {
                 </span>
               </div>
 
-              <div className="flex">
+              <div className="flex ml-4 lg:ml-0">
                 {post.meta.tags?.map((tag: string) => {
                   let tagClass = "";
                   if (tag === "martial arts") {
