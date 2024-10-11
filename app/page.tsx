@@ -16,13 +16,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="lg:w-full w-[95%] mx-auto lg:mx-0">
-      <div className="lg:w-[70%] mx-auto rounded-md relative lg:flex flex-col antialiased">
+    <>
         {/* HERO */}
-        <div className="lg:flex items-center justify-between w-full">
+        <div className="lg:flex items-center justify-between">
           <div>
             <img
-              className="w-[95%] mx-auto lg:w-[300px] lg:h-[300px]rounded-md"
+              className="w-full mx-auto lg:w-[300px] lg:h-[300px]rounded-md"
               src="https://via.placeholder.com/300x300"
               alt="Placeholder Image"
             />
@@ -46,7 +45,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-[95%] mx-auto text-[22px] text-wrap lg:ml-20">
+          <div className="mx-auto text-[22px] text-wrap lg:ml-20">
             Hello, I'm
             <h1 className="text-3xl font-bold my-8">Ebenezer Zergabachew</h1>
             <p className="lg:w-1/2">
@@ -57,10 +56,10 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="text-3xl mt-14 mb-4 w-[95%] lg:mx-0 mx-auto font-bold">
+        <h2 className="text-3xl mt-14 mb-4 lg:mx-0 mx-auto font-bold">
           About Me
         </h2>
-        <p className="text-[22px] lg:w-2/3 w-[95%] lg:mx-0 mx-auto ">
+        <p className="text-[22px] w-full lg:mx-0 mx-auto ">
           I’m currently pursuing a degree in Philosophy, Politics, and Economics
           at Virginia Tech. In between classes, I lead the entrepreneurship club
           at VT.
@@ -77,7 +76,7 @@ export default function Home() {
           <br />
           <br />I write about martial arts, product development, and
           Christianity.{" "}
-          <Link className="font-semibold italic" href="/blog">
+          <Link className="font-semibold italic" href="/posts">
             Check out my blog.
           </Link>
         </p>
@@ -88,8 +87,7 @@ export default function Home() {
           <Mail size={30} strokeWidth={1} absoluteStrokeWidth />
           <Github size={30} strokeWidth={1} absoluteStrokeWidth />
           </div> */}
-      </div>
       <BackgroundBeams className="z-[-10]" />
-    </div>
+    </>
   );
 }

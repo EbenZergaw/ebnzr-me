@@ -4,12 +4,12 @@ import Link from "next/link";
 import ThemeToggle from "./theme/theme-toggle";
 import { usePathname } from "next/navigation";
 import { AlignJustify, X } from "lucide-react";
+import path from "path";
 
 function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   const LINKS = [
@@ -21,7 +21,10 @@ function Navbar() {
   // Handle closing mobile menu when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event: any) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -41,17 +44,20 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <>
       {/* Desktop NAV */}
       <div className="hidden lg:block lg:flex lg:items-center mt-4 z-0 chakra text-xl mb-20">
-        <div className="lg:w-[70%] mx-auto">
+        <div className="w-full mx-auto">
           <div className="lg:w-1/2 lg:flex lg:items-center lg:justify-between chakra !font-extralight">
             {LINKS.map((link) => (
               <Link href={link.href} key={link.href}>
                 <span
-                  className={`hover:font-medium chakra ${
-                    pathname.includes(link.href) ? "font-medium" : ""
-                  }`}
+                  className={`hover:font-medium chakra 
+                    ${
+                      (pathname === link.href || (pathname === "/" && link.href === "/")) &&
+                      "font-medium"
+                    }
+                  `}
                 >
                   {link.label}
                 </span>
@@ -66,12 +72,15 @@ function Navbar() {
       </div>
 
       {/* MOBILE NAV */}
-      <div className="lg:hidden absolute right-[10px] top-[10px] z-40">
-        <AlignJustify onClick={() => setIsMobileMenuOpen(true)} />
+      <div className="lg:hidden flex items-center justify-between py-4 z-40">
+        <Link href={"/"}>
+          <h3 className="text-lg font-medium">Ebenezer Zergabachew</h3>
+        </Link>
+        <AlignJustify onClick={() => setIsMobileMenuOpen(true)} size={32} />
       </div>
 
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex  justify-center">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex justify-center">
           {/* Centered mobile menu */}
           <div
             ref={mobileMenuRef}
@@ -88,7 +97,12 @@ function Navbar() {
             {/* Mobile Menu Links */}
             <div className="flex flex-col gap-5 mt-8">
               {LINKS.map((link) => (
-                <Link href={link.href} key={link.href} onClick={handleLinkClick}>
+                <Link
+                  href={link.href}
+                  key={link.href}
+                  onClick={handleLinkClick}
+                  className="ml-2"
+                >
                   <span
                     className={`text-xl chakra ${
                       pathname.includes(link.href) ? "font-medium" : ""
@@ -99,16 +113,15 @@ function Navbar() {
                 </Link>
               ))}
 
-              <div className="border w-fit flex items-center mx-auto p-2 rounded-md border-gray-400">
+              <div className="border w-fit flex float-right items-center mx- auto px-2 rounded-md border-gray-400">
                 <div className="text-xl chakra mr-2">Theme</div>
                 <ThemeToggle />
               </div>
             </div>
-            
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 

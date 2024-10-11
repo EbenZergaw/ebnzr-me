@@ -34,9 +34,9 @@ export default function Projects() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="lg:w-[70%] w-[90%] mx-auto">
+    <div className="max-w-screen-lg mx-auto">
       <h1 className="text-3xl font-bold">Projects</h1>
-      <div className="text-xl mt-6 lg:w-[70%]">
+      <div className="text-xl mt-6 lg:w-[70%] mb-20">
         Here's a collection of some of the stuff I’ve worked on. Products I’ve
         built, designs I’ve worked on, and projects I’ve run.
         <br />
@@ -63,9 +63,9 @@ export default function Projects() {
             <div
               ref={ref}
               className={`
-                border
                 w-full lg:max-w-[90%] lg:h-[90vh] h-[100vh]
-                flex flex-col backdrop-blur-2xl dark:bg-[#0B0E13] 
+                flex flex-col backdrop-blur-2xl backdrop-grayscale backdrop-brightness-200 backdrop-opacity-100 dark:bg-[#0B0E13]/80 
+                bg-white/50 lg:bg-none lg:backdrop-blur-3xl lg:backdrop-grayscale-0 lg:backdrop-opacity-20
                 overflow-scroll z-50 lg:rounded-md border-0 lg:border dark:border-[#545454]
                 `}
             >
@@ -134,8 +134,8 @@ export default function Projects() {
 const cards = [
   {
     title: "Combat Crafter",
-    titleClass: "text-red-700",
-    borderClass: "border-red-900 red-glow bg-white dark:bg-[#0B0E13]",
+    titleClass: "text-white lg:text-2xl bg-gradient-to-b from-slate-50 to-slate-700 bg-clip-text text-transparent",
+    borderClass: "border-red-900 red-glow bg- white dark: bg-[#0B141F]",
     description: `A game development project I worked on.`,
     src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728435589/aoa6t8qgx0cqbixzsh76.png",
     ctaText: "Learn More",

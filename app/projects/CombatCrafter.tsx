@@ -60,7 +60,7 @@ function CombatCrafter() {
           <h2 className="text-2xl font-medium">Tech Stack</h2>
           <div className="flex items-center mt-4">
             <img
-              src="https://skillicons.dev/icons?i=typescript,tailwind,react,nextjs,nodejs,prisma,&perline=14"
+              src="https://skillicons.dev/icons?i=typescript,tailwind,react,nextjs,nodejs,prisma,supabase,&perline=14"
               alt=""
             />
           </div>

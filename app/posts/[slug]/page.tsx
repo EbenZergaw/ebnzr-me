@@ -73,8 +73,8 @@ function PostPage({ params }: any) {
   const props = getPost(params);
 
   return (
-    <>
-        <article className="lg:w-[40%] mx-auto">
+    <div className="h-fit">
+        <article className=" mx-auto h-fit">
         <h1 className="font-bold text-3xl mb-2">{props.frontmatter.title}</h1>
         <span className="text-lg font-semibold">
             {props.frontmatter.date}
@@ -88,7 +88,7 @@ function PostPage({ params }: any) {
             components={components}
         ></MDXRemote>
         </article>
-    </>
+    </div>
   );
 }
 

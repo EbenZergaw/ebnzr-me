@@ -63,16 +63,17 @@ function page() {
   });
 
   return (
-    <div className="lg:w-[70%] w-[90%] mx-auto">
-      <h1 className="text-3xl text-primary font-bold ml-2">Blog</h1>
+    <div className="mx-auto">
+      <h1 className="text-3xl text-primary font-bold">Blog</h1>
       {/* <p className="text-white">Here are my writings.</p> */}
 
-      <div className="w-[100%] mx-auto mt-10">
+      <div className="mx-auto mt-10">
         {sortedPosts.map((post) => (
           <Link href={`/posts/${post.slug}`} passHref key={post.slug} className="cursor-pointer">
-            <div className="my-8 pl-2 border-black dark:border-[#B9C2DE] dark:hover:border-white hover:border-l-2 cursor-pointer">
+            <div className="my-8 cursor-pointer transitionQ rounded-md
+            ">
               <div className="lg:flex items-center justify-between">
-                <h3 className="text-lg font-normal text-primary lg:w-[70%] leading-6">
+                <h3 className="text-lg font-medium text-primary lg:w-[70%] leading-6">
                   {post.meta.title}
                 </h3>
                 <span className="text-secondary font-light !dark:text-gray-300 text-right">
@@ -97,7 +98,7 @@ function page() {
                   }
 
                   return (
-                    <p className={`font-thin ${tagClass} mr-2`} key={tag}>
+                    <p className={`font-bold ${tagClass} mr-2`} key={tag}>
                       #{tag.replace(/ /g, "-")}
                     </p>
                   );

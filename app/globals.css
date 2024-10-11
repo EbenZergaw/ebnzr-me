@@ -9,7 +9,6 @@ html{
   background-image: url('../public/pattern.png');
   background-size: 20%;
   background-repeat: repeat;
-  
 }
 
 h1, h2, h3, .chakra{
@@ -31,6 +30,12 @@ div, p, span {
   .dark h1, .dark h2, .dark h3, .dark .chakra {
     background: none; /* Remove the gradient */
     -webkit-text-fill-color: rgb(226, 226, 226); /* Make the text white */
+  }
+
+  html{
+    background-image: url('../public/pattern.png');
+    background-size: 80%;
+    background-repeat: repeat;
   }
 }
 

@@ -1,11 +1,8 @@
-
 import type { Metadata } from "next";
 import ThemeProvider from "@/components/theme/theme-provider";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
-
 
 export const metadata: Metadata = {
   title: "Ebenezer Zergabachew",
@@ -17,15 +14,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en" suppressHydrationWarning className={`wrapper`}>
-      <body className="pb-20 mt-10 lg:mt-0">
-        <ThemeProvider>
-          <Navbar />
-          {children}
-        </ThemeProvider>
+      <body className="pb-20 lg:mt-0">
+        <div className="lg:w-full max-w-screen-lg mx-auto rounded-md relative lg:flex flex-col antialiased px-5">
+          <ThemeProvider>
+            <Navbar />
+            <div className="mt-10">{children}</div>
+          </ThemeProvider>{" "}
+        </div>
       </body>
     </html>
   );
