@@ -103,7 +103,7 @@ export default function Projects() {
                 lg:saturate-0 lg:blur-[0.3px] hover:blur-0 hover:saturate-100 transitionQ relative p-0 flex flex-col ease-in-out
                 border ${card.borderClass}
                 lg:opacity-30 lg:dark:opacity-50 hover:opacity-100 hover:lg:dark:opacity-100
-                rounded-xl !cursor-pointer ${card.layout} 
+                rounded-xl cursor-pointer ${card.layout} 
               `}
               style={{
                 cursor: "pointer",

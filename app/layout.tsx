@@ -3,6 +3,7 @@ import ThemeProvider from "@/components/theme/theme-provider";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export const metadata: Metadata = {
   title: "Ebenezer Zergabachew",
@@ -23,6 +24,7 @@ export default function RootLayout({
             <div className="mt-10">{children}</div>
           </ThemeProvider>{" "}
         </div>
+        <BackgroundBeams className="z-[-10]"></BackgroundBeams>
       </body>
     </html>
   );

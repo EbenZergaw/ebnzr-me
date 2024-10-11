@@ -17,7 +17,8 @@ module.exports = {
     	extend: {
     		animation: {
     			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-    			'shiny-text': 'shiny-text 8s infinite'
+    			'shiny-text': 'shiny-text 8s infinite',
+				"meteor-effect": "meteor 5s linear infinite"
     		},
     		keyframes: {
     			'border-beam': {
@@ -32,8 +33,16 @@ module.exports = {
     				'30%, 60%': {
     					'background-position': 'calc(100% + var(--shiny-width)) 0'
     				}
-    			}
-    		}
+    			},
+				meteor: {
+					"0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+					"70%": { opacity: "1" },
+					"100%": {
+					  transform: "rotate(215deg) translateX(-500px)",
+					  opacity: "0",
+					},
+				  },
+    		},
     	}
     }
 };
