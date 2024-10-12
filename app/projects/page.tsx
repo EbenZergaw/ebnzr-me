@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import CombatCrafter from "./CombatCrafter";
-import { BorderBeam } from "@/components/ui/border-beam";
+import StartupSprint from "./StartupSprint";
 import { X } from "lucide-react";
 
 export default function Projects() {
@@ -50,7 +50,7 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 backdrop-blur-[5px] z-40"
+            className="fixed inset-0 bg-black/10 dark:bg-white/10 backdrop-blur-[5px] z-40"
           />
         )}
       </AnimatePresence>
@@ -66,13 +66,13 @@ export default function Projects() {
                 w-full lg:max-w-[90%] lg:h-[90vh] h-[100vh]
                 flex flex-col backdrop-blur-2xl backdrop-grayscale backdrop-brightness-200 backdrop-opacity-100 dark:bg-[#0B0E13]/80 
                 bg-white/50 lg:bg-none lg:backdrop-blur-3xl lg:backdrop-grayscale-0 lg:backdrop-opacity-20
-                overflow-scroll z-50 lg:rounded-md border-0 lg:border dark:border-[#545454]
+                overflow-scroll z-50 lg:rounded-md border-0 lg:border dark:border-[#545454] border-gray-400
                 `}
             >
               <div className="h-full">
                   {/* Close button */}
                   <motion.button
-                    className="flex absolute lg:relative top-4 right-4 items-center justify-center bg-white dark:bg-[#0B0E13] rounded-full h-8 w-8 shadow-lg z-20 lg:right-0 lg:left-4"
+                    className="flex lg:sticky absolute top-4 right-4 items-center justify-center rounded-full h-8 w-8 z-20 lg:right-0 lg:left-4 cursor-pointer"
                     onClick={() => setActive(null)}
                   >
                     <X />
@@ -152,7 +152,7 @@ const cards = [
     ctaText: "Learn More",
     ctaLink: "#",
     layout: "col-span-2 row-span-1", // Spans one column and two rows
-    content: <CombatCrafter></CombatCrafter>
+    content: <StartupSprint></StartupSprint>
   },
   {
     description: "Various designs and artworks I’ve created.",

@@ -66,7 +66,7 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="float-right lg:absolute lg:right-10">
+        <div className="float-right lg:absolute lg:right-4">
           <ThemeToggle />
         </div>
       </div>
