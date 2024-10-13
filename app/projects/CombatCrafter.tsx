@@ -13,15 +13,26 @@ import { ExternalLink } from "lucide-react";
 function CombatCrafter() {
   return (
     <div className="p-4 h-full lg:flex">
-      <div className="mx-auto my-auto flex lg:w-[40%]">
+      <div className="mx-auto my-auto lg:flex flex-none lg:w-[40%]">
+        <div className="lg:hidden">
+          <h1 className="font-bold text-3xl">Combat Crafter</h1>
+
+          <Link
+            href="https://www.combatcrafter.com/"
+            className="flex items-center text-lg my-4 cursor-pointer"
+          >
+            <ExternalLink />
+            <div className="ml-2 mt-[1px]">Website</div>
+          </Link>
+        </div>
         <Iphone15Pro
           src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728593230/dcy21flqnaso8uphdzb0.png"
-          className="my-auto mx-auto"
+          className="my-auto mx-auto w-[90%]"
         />
       </div>
 
       <div className="lg:w-[60%]">
-        <div className="absolute top-4 lg:relative lg:top-0">
+        <div className="hidden lg:block">
           <h1 className="font-bold text-3xl">Combat Crafter</h1>
 
           <Link
@@ -69,17 +80,26 @@ function CombatCrafter() {
           <p className="mt-8 text-lg">
             I initially built a landing page to validate the idea and then built
             a web app MVP using Next.js and Prisma. I used Tailwind CSS for
-            styling and TypeScript for type safety. I drew the illustrations using Procreate.
+            styling and TypeScript for type safety. I drew the illustrations
+            using Procreate.
             <br />
             <br />
             Since then, I've built a mobile app using React Native and I'm in
             the process of getting it on the App Store.
           </p>
         </div>
-        
+
         <div className="my-4 flex flex-col gap-4 pb-20">
-            <img className="rounded-md" src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728594134/sgvurixhy4gjhhqnij9h.png" alt="" />
-            <img className="rounded-md" src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728594134/mgxddh5ihwybgi0jvlmf.png" alt="" />
+          <img
+            className="rounded-md"
+            src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728594134/sgvurixhy4gjhhqnij9h.png"
+            alt=""
+          />
+          <img
+            className="rounded-md"
+            src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728594134/mgxddh5ihwybgi0jvlmf.png"
+            alt=""
+          />
         </div>
       </div>
     </div>

@@ -56,7 +56,7 @@ export const MobileMenu = ({
   }, [buttonClicked]);
 
   return (
-    <div className="w-full fixed z-50 md:hidden lg:hidden">
+    <div className="w-full fixed lg:z-50 z-[49] md:hidden lg:hidden">
       <button
         ref={buttonRef} // Attach ref to button
         onClick={toggleMenu}
@@ -77,7 +77,7 @@ export const MobileMenu = ({
       
       <div
         ref={menuRef} // Reference the menu container
-        className={cn("w-1/2 fixed right-4 block md:hidden z-50", className)}
+        className={cn("w-1/2 fixed right-4 block md:hidden", className)}
       >
         <AnimatePresence>
           {open && (

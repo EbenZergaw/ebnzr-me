@@ -70,8 +70,11 @@ function page() {
       <div className="mx-auto mt-10">
         {sortedPosts.map((post) => (
           <Link href={`/posts/${post.slug}`} passHref key={post.slug} className="cursor-pointer">
-            <div className="my-8 cursor-pointer transitionQ rounded-md
-            ">
+            <div className="
+            my-8 cursor-pointer
+            hover:border-l hover:border-white hover:pl-2 hover:ml-[-8px] hover:transition-all
+            "
+            >
               <div className="lg:flex items-center justify-between">
                 <h3 className="text-lg font-medium text-primary lg:w-[70%] leading-6">
                   {post.meta.title}
