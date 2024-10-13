@@ -56,7 +56,7 @@ export const MobileMenu = ({
   }, [buttonClicked]);
 
   return (
-    <div className="w-full fixed z-50">
+    <div className="w-full fixed z-50 md:hidden lg:hidden">
       <button
         ref={buttonRef} // Attach ref to button
         onClick={toggleMenu}
