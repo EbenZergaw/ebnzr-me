@@ -21,7 +21,7 @@ export default function RootLayout({
         <div className="lg:w-full max-w-screen-lg mx-auto rounded-md relative lg:flex flex-col antialiased px-5">
           <ThemeProvider>
             <Navbar />
-            <div className="mt-10">{children}</div>
+            <div className="mt-12">{children}</div>
           </ThemeProvider>{" "}
         </div>
         <BackgroundBeams className="z-[-10]"></BackgroundBeams>

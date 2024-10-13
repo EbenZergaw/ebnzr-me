@@ -19,58 +19,6 @@ export default function Home() {
     { href: "mailto:eben.zergaw@gmail.com", icon: Mail },
   ];
 
-  const links = [
-    {
-      title: "Home",
-      icon: (
-        <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
- 
-    {
-      title: "Products",
-      icon: (
-        <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
-      icon:  <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
- 
-    {
-      title: "Twitter",
-      icon: (
-        <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <Twitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-  ];
-
   return (
     <>
       {/* HERO */}
@@ -106,11 +54,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
-        items={links}
-      />
 
       <h2 className="text-3xl mt-14 mb-4 lg:mx-0 mx-auto font-bold">
         About Me
