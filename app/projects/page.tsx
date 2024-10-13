@@ -13,6 +13,7 @@ export default function Projects() {
   );
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
+  
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -34,7 +35,7 @@ export default function Projects() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="max-w-screen-lg mx-auto">
+    <div className="max-w-screen-lg mx-auto searchCursor">
       <h1 className="text-3xl font-bold">Projects</h1>
       <div className="text-xl mt-6 lg:w-[70%] mb-20">
         Here's a collection of some of the stuff I’ve worked on. Products I’ve
@@ -63,16 +64,16 @@ export default function Projects() {
             <div
               ref={ref}
               className={`
-                w-full lg:max-w-[90%] lg:h-[90vh] h-[100vh]
+                w-full lg:max-w-7xl lg:h-[90vh] h-[100vh] !p-0
                 flex flex-col backdrop-blur-2xl backdrop-grayscale backdrop-brightness-200 backdrop-opacity-100 dark:bg-[#0B0E13]/80 
                 bg-white/50 lg:bg-none lg:backdrop-blur-3xl lg:backdrop-grayscale-0 lg:backdrop-opacity-20
                 overflow-scroll z-50 lg:rounded-md border-0 lg:border dark:border-[#545454] border-gray-400
                 `}
             >
-              <div className="h-full">
+              <div className="h-full customScroll">
                   {/* Close button */}
                   <motion.button
-                    className="flex lg:sticky absolute top-4 right-4 items-center justify-center rounded-full h-8 w-8 z-20 lg:right-0 lg:left-4 cursor-pointer"
+                    className="flex lg:sticky absolute top-4 right-4 items-center justify-center rounded-full h-8 w-8 z-20 lg:right-0 lg:left-1 lg:top-1 cursor-pointer"
                     onClick={() => setActive(null)}
                   >
                     <X />

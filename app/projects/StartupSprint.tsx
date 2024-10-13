@@ -3,10 +3,10 @@ import { SearchX, Hammer, BriefcaseBusiness } from "lucide-react";
 
 function StartupSprint() {
   return (
-    <div className='p-4 h-full lg:flex"'>
+    <div className='h-full lg:flex"'>
       <div className="lg:grid lg:grid-cols-2">
         <div className="lg:px-10 pt-0">
-          <h1 className="font-bold text-3xl bg-gradient-to-t dark:to-blue-400 from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="font-bold text-3xl mb-4">
             Startup Sprint
           </h1>
           <p>
@@ -105,7 +105,7 @@ function StartupSprint() {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <h3 className="text-3xl font-bold">What I Learned</h3>
             <br />
             <p>
@@ -149,7 +149,7 @@ function StartupSprint() {
 
             <img
                 // how to make this image stick at the bottom of the div
-                className="mt-auto"
+                className="mt-8"
               src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728693489/oeutoopjl7agln8alvq6.png"
               alt="Screenshot of our master plan doc"
             />
@@ -160,7 +160,7 @@ function StartupSprint() {
         </div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-3 gap-4 lg:p-10">
+      <div className="lg:grid lg:grid-cols-3 gap-4 lg:px-10 lg:mt-10">
         <div>
           <img
             src="https://media.licdn.com/dms/image/v2/D4E22AQEpPEBRPg9T0A/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728271718936?e=1731542400&v=beta&t=E7w0JDzkdsL6EH7IrmKc5tswq0BTtsFuzxa9flwuvEw"
