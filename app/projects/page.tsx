@@ -51,7 +51,7 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/10 dark:bg-white/10 backdrop-blur-[5px] z-40"
+            className="fixed inset-0 bg-black/10 dark:bg-w hite/10 backdrop-blur-[5px] z-[48]"
           />
         )}
       </AnimatePresence>
@@ -59,7 +59,7 @@ export default function Projects() {
       {/* Expanded Card */}
       <div>
         {active && typeof active === "object" && (
-          <div className="fixed inset-0 grid place-items-center z-50">
+          <div className="fixed inset-0 grid place-items-center z-[49]">
             
             <div
               ref={ref}

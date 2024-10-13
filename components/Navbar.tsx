@@ -49,7 +49,7 @@ function Navbar() {
   return (
     <>
       {/* Desktop NAV */}
-      <div className="hidden lg:block lg:flex lg:items-center mt-4 z-50 chakra text-xl mb-20">
+      <div className="hidden lg:block lg:flex lg:items-center mt-4 z-[46] chakra text-xl mb-20">
         <div className="w-full mx-auto">
           <div className="lg:w-1/2 lg:flex lg:items-center lg:justify-between chakra !font-extralight">
             {links.map((link) => (

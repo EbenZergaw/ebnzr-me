@@ -21,15 +21,17 @@ function CombatCrafter() {
       </div>
 
       <div className="lg:w-[60%]">
-        <h1 className="font-bold text-3xl">Combat Crafter</h1>
+        <div className="absolute top-4 lg:relative lg:top-0">
+          <h1 className="font-bold text-3xl">Combat Crafter</h1>
 
-        <Link
-          href="https://www.combatcrafter.com/"
-          className="flex items-center text-lg my-4 cursor-pointer"
-        >
-          <ExternalLink />
-          <div className="ml-2 mt-[1px]">Website</div>
-        </Link>
+          <Link
+            href="https://www.combatcrafter.com/"
+            className="flex items-center text-lg my-4 cursor-pointer"
+          >
+            <ExternalLink />
+            <div className="ml-2 mt-[1px]">Website</div>
+          </Link>
+        </div>
 
         <p className="text-lg">
           I wanted to build tooling and software around martial arts and Combat
