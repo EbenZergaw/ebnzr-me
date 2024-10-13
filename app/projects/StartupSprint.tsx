@@ -73,7 +73,7 @@ function StartupSprint() {
           </div>
         </div>
 
-        <div>
+        <div className="lg:px-10 pt-0">
           <div className="mb-10">
             <img
               className="mx-auto"
@@ -86,7 +86,7 @@ function StartupSprint() {
 
             <div className="mt-4">
               <p>
-                The typical profile of a Startup Sprint is:
+                The typical profile of a Startup Sprint participants is:
                 <div className="mb-2">
                   <div className="font-bold">High Agency:</div>
                   Creative executors who are self-sufficient, competitive, and
@@ -99,7 +99,7 @@ function StartupSprint() {
                 </div>
                 <div className="mb-2">
                   <div className="font-bold">Ambitious:</div>
-                  This is where big dreams take root.
+                  They're driven by a desire to create something impactful.
                 </div>
               </p>
             </div>
@@ -160,7 +160,7 @@ function StartupSprint() {
         </div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-3 gap-4 lg:px-10 lg:mt-10">
+      <div className="lg:grid lg:grid-cols-3 gap-4 lg:px-10 lg:mt-10 pb-10">
         <div>
           <img
             src="https://media.licdn.com/dms/image/v2/D4E22AQEpPEBRPg9T0A/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728271718936?e=1731542400&v=beta&t=E7w0JDzkdsL6EH7IrmKc5tswq0BTtsFuzxa9flwuvEw"

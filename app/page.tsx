@@ -6,6 +6,7 @@ import { Linkedin, Twitter, Mail, Github } from "lucide-react";
 import Link from "next/link";
 import { Meteors } from "@/components/ui/meteors";
 import { FloatingDock } from "@/components/ui/floating-dock";
+import headshot from '../public/headshot.png'
 
 export default function Home() {
   const SOCIALS = [
@@ -75,9 +76,9 @@ export default function Home() {
       {/* HERO */}
       <div className="lg:flex items-center justify-between">
         <div>
-          <img
-            className="w-full mx-auto lg:w-[300px] lg:h-[300px]rounded-md"
-            src="https://via.placeholder.com/300x300"
+          <Image
+            className="w-full mx-auto lg:w-[600px] lg:h-[300px]rounded-md"
+            src={headshot}
             alt="Placeholder Image"
           />
           <div className="flex items-center justify-between mt-4 cursor-pointer w-2/3 lg:w-full mx-auto mb-14 lg:mb-0">
