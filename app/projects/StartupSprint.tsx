@@ -5,7 +5,7 @@ function StartupSprint() {
   return (
     <div className='h-full lg:flex"'>
       <div className="lg:grid lg:grid-cols-2">
-        <div className="lg:px-10 pt-0">
+        <div className="lg:px-10 px-6 mt-4 pt-0">
           <h1 className="font-bold text-3xl mb-4">
             Startup Sprint
           </h1>
@@ -73,7 +73,7 @@ function StartupSprint() {
           </div>
         </div>
 
-        <div className="lg:px-10 pt-0">
+        <div className="lg:px-10 px-6 mt-4 pt-0">
           <div className="mb-10">
             <img
               className="mx-auto"
@@ -160,7 +160,7 @@ function StartupSprint() {
         </div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-3 gap-4 lg:px-10 lg:mt-10 pb-10">
+      <div className="lg:grid lg:grid-cols-3 gap-4 lg:px-10 px-6 mt-4 lg:mt-10 pb-10">
         <div>
           <img
             src="https://media.licdn.com/dms/image/v2/D4E22AQEpPEBRPg9T0A/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728271718936?e=1731542400&v=beta&t=E7w0JDzkdsL6EH7IrmKc5tswq0BTtsFuzxa9flwuvEw"

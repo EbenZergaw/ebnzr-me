@@ -5,7 +5,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Linkedin, Twitter, Mail, Github } from "lucide-react";
 import Link from "next/link";
 import { Meteors } from "@/components/ui/meteors";
-import { FloatingDock } from "@/components/ui/floating-dock";
+import { FloatingDock } from "@/components/MobileMenu";
 import headshot from '../public/headshot.png'
 
 export default function Home() {

@@ -9,22 +9,7 @@ import { useRef, useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
-export const FloatingDock = ({
-  items,
-  mobileClassName,
-}: {
-  items: { label: string; href: string }[];
-  desktopClassName?: string;
-  mobileClassName?: string;
-}) => {
-  return (
-    <>
-      <FloatingDockMobile items={items} className={mobileClassName} />
-    </>
-  );
-};
-
-const FloatingDockMobile = ({
+export const MobileMenu = ({
   items,
   className,
 }: {
@@ -71,8 +56,8 @@ const FloatingDockMobile = ({
   }, [buttonClicked]);
 
   return (
-    <div className="w-full fixed z-50 md:hidden">
-      <span
+    <div className="w-full fixed z-50">
+      <button
         ref={buttonRef} // Attach ref to button
         onClick={toggleMenu}
         className={`
@@ -80,13 +65,16 @@ const FloatingDockMobile = ({
           font-semibold chakra 
           text-black dark:text-white/40
           text-opacity-40
+          bg-white/30 dark:bg-[#0B0E13]/30
           ${open && "opacity-100 dark:text-white/100 text-opacity-100"}
-          backdrop-blur-[2px] px-2 py-1 pr-0
+          backdrop-blur-[2px] px-2 py-1 mx-[-8px]
           `}
       >
         MENU
-      </span>
+      </button>
 
+      <div className="mb-2"></div>
+      
       <div
         ref={menuRef} // Reference the menu container
         className={cn("w-1/2 fixed right-4 block md:hidden z-50", className)}
@@ -120,7 +108,7 @@ const FloatingDockMobile = ({
                     onClick={() => {
                       setOpen(false);
                     }}
-                    className="border border-gray-600 rounded-md w-full p-2 flex items-center justify-between text-right backdrop-blur-[3px] transitionQ bg-white/50 dark:bg-[#0B0E13]/40"
+                    className="border border-gray-400 dark:border-gray-700 rounded-md w-full p-2 flex items-center justify-between text-right backdrop-blur-[3px] transitionQ bg-white/30 dark:bg-[#0B0E13]/40"
                   >
                     <div className="w-full text-lg text-right float-right">
                       {item.label}
@@ -129,7 +117,7 @@ const FloatingDockMobile = ({
 
                   {idx == items.length - 1 && (
                     <div
-                      className="border border-gray-600 rounded-md w-full p-2 flex items-center justify-between text-right mt-2 backdrop-blur-[3px] bg-white/50 dark:bg-[#0B0E13]/40"
+                      className="border border-gray-400 dark:border-gray-700 rounded-md w-full p-2 flex items-center justify-between text-right mt-2 backdrop-blur-[3px] bg-white/30 dark:bg-[#0B0E13]/40"
                       onClick={() => {
                         setOpen(false);
                         if (theme == "dark") {
