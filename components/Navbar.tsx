@@ -38,11 +38,6 @@ function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  // Close menu when user navigates to a link
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <>
       {/* Desktop NAV */}
