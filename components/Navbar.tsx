@@ -3,9 +3,6 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import ThemeToggle from "./theme/theme-toggle";
 import { usePathname } from "next/navigation";
-import { AlignJustify, X } from "lucide-react";
-import path from "path";
-// import { FloatingDock } from "./ui/floating-dock";
 import { MobileMenu } from "./MobileMenu";
 
 function Navbar() {

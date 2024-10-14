@@ -1,12 +1,5 @@
 import React from "react";
 import Iphone15Pro from "@/components/ui/iphone-15-pro";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 

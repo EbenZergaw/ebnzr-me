@@ -1,13 +1,11 @@
 "use client";
-import React, { useId, useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import CombatCrafter from "./CombatCrafter";
 import StartupSprint from "./StartupSprint";
 import Design from "./Design";
 import { X, Info, Swords, Trophy, Brush } from "lucide-react";
-import { title } from "process";
 
 export default function Projects() {
 
