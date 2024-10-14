@@ -1,59 +1,59 @@
-import type { Config } from 'tailwindcss'
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require("daisyui")
-  ],
-  daisyui: {
-    themes: [
-      {
-        dark: {
-          "primary": "#ff5a21",
-                  
-          "secondary": "#9554FF",
-                  
-          "accent": "#5E9EFF",
-                  
-          "neutral": "#6C83A2",
-                  
-          "base-100": "#1f2937",
-                  
-          "info": "#38bdf8",
-                  
-          "success": "#4ade80",
-                  
-          "warning": "#e11d48",
-                  
-          "error": "#FF5B5B",
-        },
-        light: {
-          "primary": "#ff5a21", 
-          "secondary": "#003459", 
-          "accent": "#9554FF", 
-          "neutral": "#2C3849",
-          "base-100": "#FBECD7",
-          "info": "#7DD3FC", 
-          "success": "#68D391", 
-          "warning": "#F6E05E",
-          "error": "#FF4949",
-        }
-      },
-    ],
-  },
+  darkMode: "class",
+  important: true,
+  plugins: [addVariablesForColors, require("tailwindcss-animate")],
+    theme: {
+    	extend: {
+    		animation: {
+    			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+    			'shiny-text': 'shiny-text 8s infinite',
+				"meteor-effect": "meteor 5s linear infinite"
+    		},
+    		keyframes: {
+    			'border-beam': {
+    				'100%': {
+    					'offset-distance': '100%'
+    				}
+    			},
+    			'shiny-text': {
+    				'0%, 90%, 100%': {
+    					'background-position': 'calc(-100% - var(--shiny-width)) 0'
+    				},
+    				'30%, 60%': {
+    					'background-position': 'calc(100% + var(--shiny-width)) 0'
+    				}
+    			},
+				meteor: {
+					"0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+					"70%": { opacity: "1" },
+					"100%": {
+					  transform: "rotate(215deg) translateX(-500px)",
+					  opacity: "0",
+					},
+				  },
+    		},
+    	}
+    }
+};
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
 }
-export default config

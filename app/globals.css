@@ -1,85 +1,97 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
-.dark{
-    background-image: url('../public/images/pattern.png');
-    background-size: 10%;
-    transition: 0.8s;
+html{
+  background-image: url('../public/pattern.png');
+  background-size: 20%;
+  background-repeat: repeat;
 }
 
-.light{
-    background-image: url('../public/images/light-pattern.png');
-    background-size: 10%;
-    transition: 0.8s;
-}
-
-
-@media only screen and (max-width: 768px) {
-    .dark{
-        background-image: url('../public/images/pattern.png');
-        background-size: 40%;
-        transition: 0.8s;
-    }
-    .light{
-        background-image: url('../public/images/light-pattern.png');
-        background-size: 40%;
-        transition: 0.8s;
-    }
-}
-
-svg{
-    vertical-align: bottom !important;
-}
-
-h1, h2, h3, .header-font{
+h1, h2, h3, .chakra{
     font-family: 'Chakra Petch', sans-serif;
+    /* font-weight: 500; */
 }
 
-h1, h2, h3{
-    color: #ff5a21 !important;
+div, p, span {
+  font-family: "Inter", sans-serif;
 }
 
-img {
-    border-radius: 10px;
+.dark h1, .dark h2, .dark h3, .dark.chakra{
+  background: linear-gradient(180deg, white, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.blur{
-    filter: blur(2px);
-    transition: 0.4s;
+@media (max-width: 768px) {
+  .dark h1, .dark h2, .dark h3{
+    background: none; /* Remove the gradient */
+    -webkit-text-fill-color: rgb(226, 226, 226); /* Make the text white */
+  }
+
+  html{
+    background-image: url('../public/pattern.png');
+    background-size: 80%;
+    background-repeat: repeat;
+  }
 }
 
-section{
-    transition: 0.2s;
+.dark div, .dark p, .dark span {
+  color: #B9C3DE;
 }
 
-#modal{
-    z-index: 9999;
+.light div, .light p, .light span {
+  color: black
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 6px;
+.transitionQ {
+  transition: 800ms ease;
+  transition: all 0.8s;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-/* background: #9554FF; */
+.wrapper {
+  transition: 600ms ease;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-background: #ff5a21 ;
+/* Light mode */
+.wrapper.light {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-footer{
-    position: fixed;
-    bottom: 0px;
+/* Dark mode */
+.wrapper.dark {
+  background-color: #0C0E13;
+  color: #ffffff;
 }
 
-body{
-    padding-bottom: 100px;
+
+.red-glow {
+  box-shadow: 0px 0px 104px 0px rgba(224,0,0,0.30);
+  -webkit-box-shadow: 0px 0px 104px 0px rgba(224,0,0,0.30);
+  -moz-box-shadow: 0px 0px 104px 0px rgba(224,0,0,0.30);
+}
+
+.purple-glow {
+  box-shadow: 0px 0px 104px 0px rgba(168, 0, 224, 0.3);
+  -webkit-box-shadow: 0px 0px 104px 0px rgba(168, 0, 224, 0.3);
+  -moz-box-shadow: 0px 0px 104px 0px rgba(168, 0, 224, 0.3);
+}
+
+.blue-glow {
+  box-shadow: 0px 0px 104px 0px rgba(0, 131, 224, 0.5);
+  -webkit-box-shadow: 0px 0px 104px 0px rgba(0, 151, 224, 0.5);
+  -moz-box-shadow: 0px 0px 104px 0px rgba(0, 131, 224, 0.5);
+}
+
+.searchCursor {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNlYXJjaCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCIvPjxwYXRoIGQ9Im0yMSAyMS00LjMtNC4zIi8+PC9zdmc+'), auto !important;
+}
+
+.customScroll {
+  scrollbar-width: none !important;
+  scrollbar-color: #888888 #0C0E13;
 }
