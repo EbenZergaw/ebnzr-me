@@ -66,7 +66,9 @@ const components = {
 
     u: (props: any) => <u className="underline !text-green-600" {...props} />,
 
-    p: (props: any) => <p className="mb-4 text-lg tracking-normal leading-10" {...props} />
+    p: (props: any) => <p className="mb-4 text-lg tracking-normal leading-10" {...props} />,
+
+    img: (props: any) => <img className="my-4" {...props} />,
   };
   
 function PostPage({ params }: any) {

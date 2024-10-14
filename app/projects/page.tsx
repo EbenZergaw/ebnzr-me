@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import CombatCrafter from "./CombatCrafter";
 import StartupSprint from "./StartupSprint";
+import Design from "./Design";
 import { X } from "lucide-react";
 
 export default function Projects() {
@@ -35,7 +36,7 @@ export default function Projects() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="max-w-screen-lg mx-auto searchCursor">
+    <div className="max-w-screen-lg mx-auto">
       <h1 className="text-3xl font-bold">Projects</h1>
       <div className="text-xl mt-6 lg:w-[70%] mb-20">
         Here's a collection of some of the stuff I’ve worked on. Products I’ve
@@ -164,7 +165,7 @@ const cards = [
     ctaText: "Learn More",
     ctaLink: "#",
     layout: "col-span-2 row-span-1", // Regular size
-    content: <CombatCrafter></CombatCrafter>
+    content: <Design></Design>
   },
   {
     description: "A smart driving assistant app.",
