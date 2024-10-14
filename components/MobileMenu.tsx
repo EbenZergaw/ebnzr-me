@@ -113,7 +113,7 @@ export const MobileMenu = ({
                       `${idx == 0 && "rounded-t-md"}`
                     )}
                   >
-                    <div className="w-full text-lg text-right float-right">
+                    <div className="w-full text-lg text-right float-right dark:text-white">
                       {item.label}
                     </div>
                   </Link>
@@ -136,7 +136,7 @@ export const MobileMenu = ({
                       ) : (
                         <Moon className="" strokeWidth={1.6}/>
                       )}
-                      <span className="text-lg">Theme</span>
+                      <span className="text-lg dark:text-white">Theme</span>
                     </div>
                   )}
                 </motion.div>

@@ -72,7 +72,7 @@ function page() {
           <Link href={`/posts/${post.slug}`} passHref key={post.slug} className="cursor-pointer">
             <div className="
             my-8 cursor-pointer
-            hover:border-l hover:border-white hover:pl-2 hover:ml-[-8px] hover:transition-all
+            hover:border-l-2 hover:dark:border-white hover:border-black hover:pl-2 hover:ml-[-8px] hover:transition-all
             "
             >
               <div className="lg:flex items-center justify-between">
