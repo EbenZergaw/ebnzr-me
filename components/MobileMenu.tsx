@@ -77,13 +77,13 @@ export const MobileMenu = ({
       
       <div
         ref={menuRef} // Reference the menu container
-        className={cn("w-1/2 fixed right-4 block md:hidden", className)}
+        className={cn("w-1/2 fixed right-4 block md:hidden rounded-md", className)}
       >
         <AnimatePresence>
           {open && (
             <motion.div
               layoutId="nav"
-              className="absolute top-full h-fit mb-2 flex flex-col gap-2 w-full right-0"
+              className="absolute top-full h-fit mb-2 flex flex-col gap- w-full right-0 rounded-md"
             >
               {items.map((item, idx) => (
                 <motion.div
@@ -108,7 +108,10 @@ export const MobileMenu = ({
                     onClick={() => {
                       setOpen(false);
                     }}
-                    className="border border-gray-400 dark:border-gray-700 rounded-md w-full p-2 flex items-center justify-between text-right backdrop-blur-[3px] transitionQ bg-white/30 dark:bg-[#0B0E13]/40"
+                    className={cn("shadow-xl border border-gray-400 dark:border-gray-700/20 w-full p-2 flex items-center justify-between text-right backdrop-blur-[3px] transitionQ backdrop-saturate-50 bg-white/30 dark:bg-[#0B0E13]/40", 
+                      `${idx != items.length - 1 && "border-b-0"}`,
+                      `${idx == 0 && "rounded-t-md"}`
+                    )}
                   >
                     <div className="w-full text-lg text-right float-right">
                       {item.label}
@@ -117,7 +120,8 @@ export const MobileMenu = ({
 
                   {idx == items.length - 1 && (
                     <div
-                      className="border border-gray-400 dark:border-gray-700 rounded-md w-full p-2 flex items-center justify-between text-right mt-2 backdrop-blur-[3px] bg-white/30 dark:bg-[#0B0E13]/40"
+                      
+                    className={cn("shadow-xl border border-gray-400 dark:border-gray-700/20 w-full p-2 flex items-center justify-between text-right backdrop-blur-[3px] transitionQ backdrop-saturate-50 bg-white/30 dark:bg-[#0B0E13]/40 border-t-0 rounded-b-md")}
                       onClick={() => {
                         setOpen(false);
                         if (theme == "dark") {
