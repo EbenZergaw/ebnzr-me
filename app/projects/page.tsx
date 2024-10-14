@@ -20,13 +20,13 @@ export default function Projects() {
       title: "Combat Crafter",
       icon: <Swords></Swords>,
       desc: "A martial arts training app I built",
-      class: "text-red-600"
+      class: "text-red-600 dark:text-red-500"
     },
     {
       title: "Startup Sprint",
       icon: <Trophy></Trophy>,
       desc: "The flagship event of the Entrepreneurship Club at Virginia Tech",
-      class: "text-purple-600"
+      class: "text-purple-600 dark:text-purple-400"
     },
     {
       title: "Designs",
@@ -204,32 +204,5 @@ const cards = [
     src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728442514/rgtahykdp1qoapixjnjc.png",
     layout: "col-span-2 row-span-1", // Regular size
     content: <Design></Design>
-  },
-  {
-    description: "A smart driving assistant app.",
-    title: "Echo Drive",
-    titleClass: "text-red-600",
-    borderClass: "border-red-600",
-    src: "https://via.placeholder.com/300x300",
-    layout: "col-span-1 row-span-1", // Regular size
-    content: <CombatCrafter></CombatCrafter>
-  },
-  {
-    description: "A mindfulness and productivity tool.",
-    title: "Mind Fuel",
-    titleClass: "text-red-600",
-    borderClass: "border-red-600",
-    src: "https://via.placeholder.com/300x300",
-    layout: "col-span-1 row-span-1", // Regular size
-    content: <CombatCrafter></CombatCrafter>
-  },
-  {
-    description: "A language learning app for punctuation mastery.",
-    title: "Comma App",
-    titleClass: "text-red-600",
-    borderClass: "border-red-600",
-    src: "https://via.placeholder.com/300x300",
-    layout: "col-span-1 row-span-1", // Regular size
-    content: <CombatCrafter></CombatCrafter>
-  },
+  }
 ];
