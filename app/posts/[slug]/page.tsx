@@ -1,21 +1,7 @@
-import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Link from "next/link";
-import { TracingBeam } from "@/components/ui/tracing-beam";
-
-// export async function generateStaticParams(){
-
-//     const files = fs.readdirSync(path.join('posts'))
-
-//     const paths = files.map(filename => ({
-//         slug: filename.replace('.mdx', '')
-//     }))
-//     console.log(paths);
-//     return paths
-// }
 
 function getPost({ slug }: { slug: string }) {
   // Construct the full path to the markdown file using process.cwd()
@@ -46,6 +32,7 @@ export async function generateMetadata({
     description: props.frontmatter.description,
   };
 }
+
 const components = {
     h1: (props: any) => <h1 className="font-bold text-3xl" {...props} />,
     
