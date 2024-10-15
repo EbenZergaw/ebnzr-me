@@ -71,7 +71,7 @@ function page() {
         {sortedPosts.map((post) => (
           <Link href={`/posts/${post.slug}`} passHref key={post.slug} className="cursor-pointer">
             <div className="
-            my-8 cursor-pointer
+            py-3 cursor-pointer
             hover:border-l-2 hover:dark:border-white hover:border-black hover:pl-2 hover:ml-[-8px] hover:transition-all
             "
             >
@@ -84,7 +84,7 @@ function page() {
                 </span>
               </div>
 
-              <div className="flex ml-4 lg:ml-0">
+              <div className="flex">
                 {post.meta.tags?.map((tag: string) => {
                   let tagClass = "";
                   if (tag === "martial arts") {
