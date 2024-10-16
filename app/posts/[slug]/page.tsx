@@ -29,6 +29,7 @@ export async function generateMetadata({
 
   return {
     title: props.frontmatter.title,
+    tags: props.frontmatter.tags,
     description: props.frontmatter.description,
   };
 }
@@ -70,6 +71,29 @@ function PostPage({ params }: any) {
         </span>
         <br />
         <span className="text-accent font-normal">Ebenezer Zergabachew</span>
+        <div className="flex mt-2">
+                {props.frontmatter.tags?.map((tag: string) => {
+                  let tagClass = "";
+                  if (tag === "martial arts") {
+                    tagClass = "!text-[#F7625C]";
+                  } else if (
+                    tag === "coding" ||
+                    tag === "technology" ||
+                    tag === "product" ||
+                    tag === "startups"
+                  ) {
+                    tagClass = "!text-[#1FA9FF]";
+                  } else if (tag === "philosophy") {
+                    tagClass = "!text-[#FF9900]";
+                  }
+
+                  return (
+                    <p className={`font-bold ${tagClass} mr-2`} key={tag}>
+                      #{tag.replace(/ /g, "-")}
+                    </p>
+                  );
+                })}
+              </div>
         <div className="mt-8"></div>
 
         <MDXRemote
