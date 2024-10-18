@@ -85,6 +85,8 @@ function PostPage({ params }: any) {
                     tagClass = "!text-[#1FA9FF]";
                   } else if (tag === "philosophy") {
                     tagClass = "!text-[#FF9900]";
+                  } else if (tag == "spirituality") {
+                    tagClass = "!text-[#9F5CF7]";
                   }
 
                   return (
