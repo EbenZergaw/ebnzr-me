@@ -43,7 +43,7 @@ const components = {
     
     strong: (props: any) => <strong className="font-semibold" {...props} />,
     
-    em: (props: any) => <em className="italic text-blue-500" {...props} />,
+    em: (props: any) => <em className="italic" {...props} />,
     
     a: (props: any) => (
       <a 
@@ -52,7 +52,7 @@ const components = {
       />
     ),
 
-    u: (props: any) => <u className="underline !text-green-600" {...props} />,
+    u: (props: any) => <u className="underline" {...props} />,
 
     p: (props: any) => <p className="mb-4 text-lg tracking-normal leading-10" {...props} />,
 
