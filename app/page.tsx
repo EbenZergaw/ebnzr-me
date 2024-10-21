@@ -45,8 +45,7 @@ export default function Home() {
           Hello, I'm
           <h1 className="text-3xl font-bold my-3">Ebenezer Zergabachew</h1>
           <p className="">
-            I'm from Addis Ababa, Ethiopia. I'm currently a student at Virginia
-            Tech with a passion for business, technology, and martial arts.
+            I'm a student at Virginia Tech with a passion for business, technology, and martial arts.
           </p>
         </div>
       </div>
