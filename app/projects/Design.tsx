@@ -25,19 +25,6 @@ function Design() {
                 cleared $100 worth of these stickers in 40 minutes at a
                 tailgate.
               </span>
-
-              <div className="mt-4">
-                <img
-                  className="h-ful w-full"
-                  src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728929229/iju2d6sskg1xheanpben.png"
-                  alt=""
-                />
-                <span className="text-sm">
-                  This was a sticker I made of my dorm that I sold to the
-                  residents. People were pulling fire alarms all the time so I
-                  figured a design with the building on fire would be a hit.
-                </span>
-              </div>
             </div>
 
             <div className="flex flex-col h-full">
@@ -54,18 +41,32 @@ function Design() {
               </span>
             </div>
           </div>
+
+          <div className="mt-4 lg:w-10/12 mx-auto">
+            <img
+              className="h-ful w-full"
+              src="https://res.cloudinary.com/dp56p8qeg/image/upload/v1728929229/iju2d6sskg1xheanpben.png"
+              alt=""
+            />
+            <span className="text-sm">
+              This was a sticker I made of my dorm that I sold to the residents.
+              People were pulling fire alarms all the time so I figured a design
+              with the building on fire would be a hit.
+            </span>
+          </div>
+
         </div>
 
         <div className="lg:mt-0 mt-12">
           <h2 className="text-2xl font-bold">College Cardz</h2>
           <p>
             College Cardz was a startup I launched with some friends in my
-            freshman year. The idea was to turn colege memories into collectible
-            trading cards. We wanted to leverage the cards for universities to
-            increase their alumni fundraising efforts but the red tape and
-            beuarocracy involved in selling to universities made it a challenge
-            for us to get off the ground. Here are some of our designs from the
-            first set.
+            freshman year. The idea was to turn college memories into
+            collectible trading cards. We wanted to leverage the cards for
+            universities to increase their alumni fundraising efforts but the
+            red tape and beuarocracy involved in selling to universities made it
+            a challenge for us to get off the ground. Here are some of our
+            designs from the first set.
           </p>
           <a
             className="font-bold italic"
