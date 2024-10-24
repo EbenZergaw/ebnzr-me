@@ -76,7 +76,7 @@ const cards = [
     title: "",
     titleClass: "text-orange-500",
     borderClass: "border-orange-500 orange-glow",
-    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728442514/rgtahykdp1qoapixjnjc.png",
+    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1729783218/u6ptfpg2rgdipq3dz6cm.jpg",
     layout: "col-span-2 row-span-1", // Regular size
     content: <Guest360></Guest360>,
   },
