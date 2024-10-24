@@ -5,10 +5,10 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import CombatCrafter from "./CombatCrafter";
 import StartupSprint from "./StartupSprint";
 import Design from "./Design";
-import { X, Info, Swords, Trophy, Brush } from "lucide-react";
+import Guest360 from "./Guest360";
+import { X, Info, Swords, Trophy, Brush, User } from "lucide-react";
 
 export default function Projects() {
-
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
@@ -18,26 +18,76 @@ export default function Projects() {
       title: "Combat Crafter",
       icon: <Swords></Swords>,
       desc: "A martial arts training app I built",
-      class: "text-red-600 dark:text-red-500"
+      class: "text-red-600 dark:text-red-500",
     },
     {
       title: "Startup Sprint",
       icon: <Trophy></Trophy>,
       desc: "The flagship event of the Entrepreneurship Club at Virginia Tech",
-      class: "text-purple-600 dark:text-purple-400"
+      class: "text-purple-600 dark:text-purple-400",
     },
     {
       title: "Designs",
       icon: <Brush></Brush>,
       desc: "Various designs I've worked on over the years",
-      class: "text-blue-500"
-    }
-  ]
+      class: "text-blue-500",
+    },
+    {
+      title: "Guest 360",
+      icon: <User></User>,
+      desc: "My project for CodeFest, a hackathon sponsored by Marriott International",
+      class: "text-orange-500",
+    },
+  ];
 
-  const [infoDescription, setInfoDescription] = useState<(typeof descriptions)[number] | null>(null);
-  
+
+// Sample project cards data with custom layout classes
+const cards = [
+  {
+    title: "Combat Crafter",
+    titleClass:
+      "text-white lg:text-2xl bg-gradient-to-b from-slate-50 to-slate-700 bg-clip-text text-transparent",
+    borderClass: "border-red-900 red-glow bg- white dark: bg-[#0B141F]",
+    description: `A game development project I worked on.`,
+    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728435589/aoa6t8qgx0cqbixzsh76.png",
+    layout: "col-span-2 row-span-2", // Spans two columns and two rows
+    content: <CombatCrafter></CombatCrafter>,
+  },
+  {
+    description: "The entrepreneurship club's rapid startup competition.",
+    title: "",
+    titleClass: "",
+    borderClass: "border-purple-600 purple-glow",
+    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728436415/ua2r1ox0vdr3edvl2gt3.png",
+    layout: "col-span-2 row-span-1", // Spans one column and two rows
+    content: <StartupSprint></StartupSprint>,
+  },
+  {
+    description: "Various designs and artworks I’ve created.",
+    title: "",
+    titleClass: "text-blue-600",
+    borderClass: "border-blue-[#67A6E3] dark:border-blue-600 blue-glow",
+    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728442514/rgtahykdp1qoapixjnjc.png",
+    layout: "col-span-2 row-span-1", // Regular size
+    content: <Design></Design>,
+  },
+  {
+    description: "A guest experience platform I'm working on.",
+    title: "",
+    titleClass: "text-orange-500",
+    borderClass: "border-orange-500 orange-glow",
+    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1729783218/u6ptfpg2rgdipq3dz6cm.jpg",
+    layout: "col-span-2 row-span-1", // Regular size
+    content: <Guest360></Guest360>,
+  },
+];
+
+
+  const [infoDescription, setInfoDescription] = useState<
+    (typeof descriptions)[number] | null
+  >(null);
+
   const ref = useRef<HTMLDivElement>(null);
-  
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -57,7 +107,7 @@ export default function Projects() {
   }, [active]);
 
   useOutsideClick(ref, () => {
-    setActive(null)
+    setActive(null);
   });
 
   return (
@@ -69,20 +119,21 @@ export default function Projects() {
       </div>
 
       <div className="mb-10 flex items-center gap-4 hidden lg:block">
-        {
-          infoDescription ? (
-            <div className={`flex items-center gap-2 ${infoDescription.class}`}>
-              {infoDescription.icon}
-              <div className={`font-semibold text-lg ${infoDescription.class}`}>{infoDescription.desc}</div>
+        {infoDescription ? (
+          <div className={`flex items-center gap-2 ${infoDescription.class}`}>
+            {infoDescription.icon}
+            <div className={`font-semibold text-lg ${infoDescription.class}`}>
+              {infoDescription.desc}
             </div>
-          ) :
-          (
-            <div className="flex items-center gap-2">
-              <Info />
-              <div className="font-semibold text-lg">Hover and click for more information</div>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2">
+            <Info />
+            <div className="font-semibold text-lg">
+              Hover and click for more information
             </div>
-          )
-        }
+          </div>
+        )}
       </div>
 
       {/* Blur Overlay */}
@@ -101,7 +152,6 @@ export default function Projects() {
       <div>
         {active && typeof active === "object" && (
           <div className="fixed inset-0 grid place-items-center z-[49]">
-            
             <div
               ref={ref}
               className={`
@@ -112,18 +162,15 @@ export default function Projects() {
                 `}
             >
               <div className="h-full customScroll">
-                  {/* Close button */}
-                  <motion.button
-                    className="flex lg:sticky absolute top-4 right-4 items-center justify-center rounded-full h-8 w-8 z-20 lg:right-0 lg:left-1 lg:top-1 cursor-pointer"
-                    onClick={() => setActive(null)}
-                  >
-                    <X />
-                  </motion.button>
-                {
-                  active.content
-                }
+                {/* Close button */}
+                <motion.button
+                  className="flex lg:sticky absolute top-4 right-4 items-center justify-center rounded-full h-8 w-8 z-20 lg:right-0 lg:left-1 lg:top-1 cursor-pointer"
+                  onClick={() => setActive(null)}
+                >
+                  <X />
+                </motion.button>
+                {active.content}
               </div>
-              
             </div>
           </div>
         )}
@@ -156,7 +203,6 @@ export default function Projects() {
                 aspectRatio: ratio, // Example aspect ratio of 4:3
               }}
             >
-              
               {/* Overlay content */}
               <div className="absolute top-5 left-5 inset-0 cursor-pointer">
                 <h3
@@ -164,7 +210,6 @@ export default function Projects() {
                 >
                   {card.title}
                 </h3>
-
               </div>
             </div>
           );
@@ -173,34 +218,3 @@ export default function Projects() {
     </div>
   );
 }
-
-// Sample project cards data with custom layout classes
-const cards = [
-  {
-    title: "Combat Crafter",
-    titleClass: "text-white lg:text-2xl bg-gradient-to-b from-slate-50 to-slate-700 bg-clip-text text-transparent",
-    borderClass: "border-red-900 red-glow bg- white dark: bg-[#0B141F]",
-    description: `A game development project I worked on.`,
-    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728435589/aoa6t8qgx0cqbixzsh76.png",
-    layout: "col-span-2 row-span-2", // Spans two columns and two rows
-    content: <CombatCrafter></CombatCrafter>
-  },
-  {
-    description: "The entrepreneurship club's rapid startup competition.",
-    title: "",
-    titleClass: "",
-    borderClass: "border-purple-600 purple-glow",
-    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728436415/ua2r1ox0vdr3edvl2gt3.png",
-    layout: "col-span-2 row-span-1", // Spans one column and two rows
-    content: <StartupSprint></StartupSprint>
-  },
-  {
-    description: "Various designs and artworks I’ve created.",
-    title: "",
-    titleClass: "text-blue-600",
-    borderClass: "border-blue-[#67A6E3] dark:border-blue-600 blue-glow",
-    src: "https://res.cloudinary.com/dp56p8qeg/image/upload/v1728442514/rgtahykdp1qoapixjnjc.png",
-    layout: "col-span-2 row-span-1", // Regular size
-    content: <Design></Design>
-  }
-];

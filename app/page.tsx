@@ -4,7 +4,9 @@ import { Linkedin, Twitter, Mail, Github } from "lucide-react";
 import Link from "next/link";
 import headshot from '../public/headshot.png'
 
-export default function Home() {
+
+export default function Home() {;
+
   const SOCIALS = [
     {
       href: "https://www.linkedin.com/in/ebenezer-zergabachew/",
@@ -67,12 +69,13 @@ export default function Home() {
         developing products, I enjoy writing, reading, and occasionally drawing.
         I spar often and train muay thai, boxing, and little bit of MMA.
         <br />
-        <br />I write about martial arts, product development, and Christianity.{" "}
+        <br />
+        I write about martial arts, product development, and Christianity.{" "}
+        <br />
         <Link className="font-semibold italic" href="/posts">
           Check out my blog.
         </Link>
       </p>
-
     </>
   );
 }
