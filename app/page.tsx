@@ -44,10 +44,11 @@ export default function Home() {;
         </div>
 
         <div className="mx-auto text-xl text-wrap lg:ml-20">
-          Hello, I'm
+          Welcome to my personal site.
           <h1 className="text-3xl font-bold my-3">Ebenezer Zergabachew</h1>
           <p className="">
-            I'm a student at Virginia Tech with a passion for business, technology, and martial arts.
+            I am a Virginia Tech student exploring the overlap of business,
+            technology, and martial arts.
           </p>
         </div>
       </div>
@@ -56,18 +57,22 @@ export default function Home() {;
         About Me
       </h2>
       <p className="text-xl w-full lg:mx-0 mx-auto ">
-        I’m currently pursuing a degree in Philosophy, Politics, and Economics
+        This site is where I share what I am building, learning, and thinking
+        about.
+        <br />
+        <br />
+        I am currently pursuing a degree in Philosophy, Politics, and Economics
         at Virginia Tech.
         <br />
         <br />
-        In between classes, I lead the entrepreneurship club at VT. Most of what
-        we do in E-Club is ecosystem development and supporting student
+        Outside class, I lead the entrepreneurship club at VT. Most of what we
+        do in E-Club is ecosystem development and supporting student
         founders.
         <br />
         <br />
-        I have a wide array of passions and interests. Next to designining and
-        developing products, I enjoy writing, reading, and occasionally drawing.
-        I spar often and train muay thai, boxing, and little bit of MMA.
+        I have a wide range of interests. Alongside designing and developing
+        products, I enjoy writing, reading, and occasionally drawing. I also
+        spar regularly and train Muay Thai, boxing, and a bit of MMA.
         <br />
         <br />
         I write about martial arts, product development, and Christianity.{" "}

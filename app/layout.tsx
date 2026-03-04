@@ -6,9 +6,9 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import UnderConstruction from "@/components/UnderConstruction";
 
 export const metadata: Metadata = {
-  title: "Ebenezer Zergabachew",
+  title: "Ebenezer Zergabachew | Personal Site",
   description:
-    "This website is currently under construction while a redesigned version is being built.",
+    "This is Ebenezer Zergabachew's personal site. It is currently being rebuilt.",
 };
 
 export default function RootLayout() {

@@ -135,8 +135,8 @@ const cards = [
     <div className="max-w-screen-lg mx-auto">
       <h1 className="text-3xl font-bold">Projects</h1>
       <div className="text-xl mt-6 lg:w-[70%] mb-10">
-        Here's a collection of some of the stuff I’ve worked on. Products I’ve
-        built, designs I’ve worked on, and projects I’ve run.
+        A few projects from my personal portfolio, including products I have
+        built, designs I have created, and initiatives I have led.
       </div>
 
       <div className="mb-10 flex items-center gap-4 hidden lg:block">

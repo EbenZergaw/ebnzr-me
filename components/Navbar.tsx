@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div className="mt-4 mb-8 lg:mb-12 flex items-center justify-between z-[46]">
       <span className="chakra text-sm lg:text-base uppercase tracking-[0.2em] opacity-80">
-        Site Offline
+        ebenezer zergabachew
       </span>
       <div className="cursor-pointer">
         <ThemeToggle />
